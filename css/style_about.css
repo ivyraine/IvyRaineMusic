@@ -1,0 +1,102 @@
+@import url(reset.css);
+
+body{
+    background-image: url(../image/about_bg.png);
+    
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Noto Sans TC", sans-serif;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- bar ----------*/
+.bar {
+    display: flex;
+    height: 104px;
+
+    align-items: center;
+}
+
+.bar img {
+    height: 50%;
+}
+
+.bar p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.bar ul {
+    display: flex;
+    /* outline: 1px solid red; */
+    width: 700px;
+    margin-left: auto;
+}
+
+.bar li {
+    flex-grow: 1;
+    position: relative;
+    text-align: center;
+}
+
+.bar a {
+    letter-spacing:1;
+    text-decoration: none;
+    color: white;
+}
+
+/* ---------- about ----------*/
+.about{
+    width: 480px;
+    margin-left:700px;
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    width:194px;
+    border-bottom: 6px solid #77FFF3;
+}
+
+.about h1{
+    font-size: 4em;
+    height: 80px;
+    /* font-weight: bold; */
+    margin-top: 20px
+}
+
+.subtitle-container{
+    display: flex;
+    justify-content: space-between;
+    width:140px;
+    border-bottom: 4px solid #77FFF3;
+}
+
+.about h2{
+    font-size: 2em;
+    height: 40px;
+    margin-top: 20px;
+}
+    
+.about p{
+    margin: 20px auto 40px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ---------- footer ----------*/
+.footer {
+    margin: 0 auto;
+    text-align: center;
+    height: 62px;
+    line-height: 62px;
+}
