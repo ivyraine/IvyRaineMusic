@@ -54,8 +54,12 @@ body {
 }
 
 /* ---------- title ----------*/
-
+.main{
+    position: relative;
+    height: 100vh;
+}
 .title-container{
+    position: absolute;
     margin: 500px 640px 140px;
 
     display: flex;

@@ -4,7 +4,7 @@ body{
     background-image: url(../image/about_bg.png);
     
     background-size: cover; 
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-position: center;
     background-attachment: fixed;
     font-family: "Noto Sans TC", sans-serif;

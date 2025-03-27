@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_composition.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>作曲編曲</title>
+</head>
+
+<body>
+
+    <!---------- bar ---------->
+    <header class="fixed-header">
+        <div class="bar">
+            <img src="image/logo.png" alt="">
+            <p>Ivy Raine Music</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>    
+
+    <div class="wrapper">
+        <!---------- title ---------->
+        <div class="title">
+            <div class = "title-container">
+                <legend>作</legend>
+                <legend>曲</legend>
+                <legend>/</legend>
+                <legend>編</legend>
+                <legend>曲</legend>
+            </div>
+        </div>
+
+        <!---------- search ---------->
+
+        <div class="search">
+            <input class="searchbar" type="text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!---------- list ---------->
+        <div class="category">
+            <div class="list">
+                <div class="list-tag" data-tab="Instrument">
+                    <span>Instrument</span>
+                    <i class="fa-solid fa-chevron-up"></i>
+
+                </div>
+                <div class="list-tag active" data-tab="genre">
+                    <span>Genre</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+                <div class="list-tag" data-tab="Mood">
+                    <span>Mood</span>
+                    <i class="fa-solid fa-chevron-up"></i>
+
+                </div>
+                <div class="list-tag" data-tab="Country">
+                    <span>Country</span>
+                    <i class="fa-solid fa-chevron-up"></i>
+
+                </div>
+            </div>
+
+             <!---------- tag ---------->
+            <div class="hashtag">
+                <span class="tag">Orchestral</span>
+                <span class="tag">Cinematic</span>
+                <span class="tag">Hiphop</span>
+                <span class="tag">Electronic</span>
+                <span class="tag">EDM</span>
+                <span class="tag">World</span>
+                <span class="tag">Latin</span>
+                <span class="tag">Rock</span>
+                <span class="tag">Funk</span>
+                <span class="tag">Blues</span>
+                <span class="tag">Country</span>
+                <span class="tag">Jazz</span>
+                <span class="tag">Exotic</span>
+            </div>
+        </div>
+
+        <!---------- songs ---------->
+        <div class="songs">
+            <ul>
+                <li>
+                    <img src="./image/songlist1.png" alt="">
+                    <p>Kung Fu Beauty</p>
+                    <div class="line"></div>
+                    <i class="fa-solid fa-play"></i>
+                </li>
+                <li>
+                    <img src="./image/songlist2.png" alt="">
+                    <p>Supreme Blessings</p>
+                    <div class="line"></div>
+                    <i class="fa-solid fa-play"></i>
+                </li>
+                <li>
+                    <img src="./image/songlist3.png" alt="">
+                    <p>Fortune Cookie</p>
+                    <div class="line"></div>
+                    <i class="fa-solid fa-play"></i>
+                </li>
+            </ul>
+        </div>
+        <!---------- player ---------->
+        <div class="player">
+            <img src="./image/songlist2.png" alt="">
+            <p>Supreme Blessings</p>
+            <img class="wave" src="./image/music_wave.png" alt="">
+            
+            <ul class="player-function">
+                <li><i class="fa-solid fa-backward-step"></i></li>
+                <li><i class="fa-solid fa-play"></i></li>
+                <li><i class="fa-solid fa-forward-step"></i></li>
+                <li><i class="fa-solid fa-volume-high"></i></li>
+            </ul>
+
+        </div>
+
+
+        <!---------- footer ---------->
+        <div class="footer">
+            <p>© 2025 Copyright Ivy Raine Music</p>
+        </div>
+
+
+    </div>    
+</body>
+</html>
