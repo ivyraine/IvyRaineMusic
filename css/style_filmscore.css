@@ -1,0 +1,88 @@
+@import url(reset.css);
+
+body{
+    background-image: url(../image/frontpage_bg.png);
+    background-size: cover; 
+    background-attachment: fixed;
+    font-family: "Noto Sans TC", sans-serif;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 2px rgba(0,0,0,.6);
+}
+
+.wrapper {
+    width: 1200px;
+    padding-top: 80px;
+    margin: 0 auto;
+}
+/* ---------- title ----------*/
+
+.title{
+    margin-top: 40px;
+
+}
+.title-container{
+    margin: 0 auto 40px;    
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    border-bottom: 8px solid #77FFF3;
+}
+
+.title-container legend{
+    font-size: 4em;
+    height: 80px;
+}
+
+iframe{
+    display: block;
+    margin: 40px auto 20px;
+}
+/* ---------- other content_portfolio ----------*/
+.player {
+    margin: 2px auto 20px;
+    display: flex;
+    width: 800px;
+    align-items: center;
+    justify-content: center;
+}
+
+.player ul {
+    display: flex;
+    width: 800px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.player li {
+    width: 100px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.player img {
+    width: 100%;
+}
+
+/*---------- arrow left and right ----------*/
+.player a {
+    display: block;
+    font-size: 2em;
+    margin: 20px;
+    color: white;
+    opacity: 40%;
+ 
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* ---------- footer ----------*/
+.footer {
+    margin: 0 auto;
+    text-align: center;
+    height: 62px;
+    line-height: 62px;
+}

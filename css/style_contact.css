@@ -3,69 +3,32 @@
 body {
     background-image: url(../image/contact_bg.png);
     background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
     background-attachment: fixed;
     font-family: "Noto Sans TC", sans-serif;
     color: white;
     font-size: 16px;
     letter-spacing: 4px;
-
+    text-shadow: 0 2px 2px rgba(0,0,0,.6);
 }
 
 .wrapper {
     width: 1200px;
+    padding-top: 80px;
     margin: 0 auto;
 }
 
-/* ---------- bar ----------*/
-.bar {
-    display: flex;
-    height: 104px;
-
-    align-items: center;
-}
-
-.bar img {
-    height: 50%;
-}
-
-.bar p {
-    font-size: 20px;
-    margin: 20px;
-}
-
-.bar ul {
-    display: flex;
-    /* outline: 1px solid red; */
-    width: 700px;
-    margin-left: auto;
-}
-
-.bar li {
-    flex-grow: 1;
-    position: relative;
-    text-align: center;
-}
-
-.bar a {
-    letter-spacing: 1;
-    text-decoration: none;
-    color: white;
-}
-
 /* ---------- main ----------*/
-
 ul{
     display:flex;
 }
 
 .main{
     width: 700px;
+    height: calc(100vh - 80px);
 }
 
 .title-container{
-    margin: 450px 80px 30px;
+    margin: 240px 80px 30px;
 
     display: flex;
     justify-content: space-between;
@@ -89,7 +52,8 @@ ul{
 /* ---------- form ----------*/
 .form {
     width: 400px;
-    padding: 300px 30px 0;
+    margin-top: 80px;
+
 }
 
 ol{

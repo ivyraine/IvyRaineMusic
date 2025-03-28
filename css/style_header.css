@@ -1,0 +1,80 @@
+@import url(reset.css);
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    background-color: #01255b;
+}
+.bar {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.bar img {
+    height: 50%;
+}
+
+.bar p {
+    margin: 20px;
+}
+
+.bar ul {
+    display: flex;
+    /* outline: 1px solid red; */
+    width: 700px;
+    margin-left: auto;
+}
+
+.bar li {
+    flex-grow: 1;
+    position: relative;
+    text-align: center;
+}
+
+.bar a {
+    letter-spacing: 0.6;
+    text-decoration: none;
+    color: white;
+    line-height: 40px;
+    display: block;
+    text-shadow: 0 1px 1px rgba(0,0,0,.5);
+
+
+}
+
+/* ---------- 子選單 ----------*/
+.bar ol{
+    /* border: 1px solid #c7c7c7; */
+    position: absolute;
+    display: none;
+    letter-spacing: 0;
+    background-color: #01255b;
+    border-radius:0 0 20px 20px;
+}
+
+/* ---------- hover and show ----------*/
+.bar a:hover{
+    color: #77FFF3;
+    font-weight: bold;
+    border-radius: 20px;
+}
+  
+.bar ol a:hover{
+    color: #77FFF3;
+    font-weight: bold;
+    border-radius: 20px;
+}
+  
+.bar li:hover ol{
+    display: block;
+    top: 100%; 
+    left: 0;   
+    width: 100%; 
+    z-index: 1000; 
+}

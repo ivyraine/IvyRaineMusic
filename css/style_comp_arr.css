@@ -1,0 +1,211 @@
+@import url(reset.css);
+
+body{
+    background-image: url(../image/frontpage_bg.png);
+    background-size: cover; 
+    background-attachment: fixed;
+    font-family: "Noto Sans TC", sans-serif;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 2px rgba(0,0,0,.6);
+}
+
+.wrapper {
+    width: 1200px;
+    padding-top: 80px;
+    margin: 0 auto;
+}
+
+/* ---------- title ----------*/
+
+.title{
+    margin-top: 40px;
+
+}
+.title-container{
+    margin: 0 auto 40px;    
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    border-bottom: 8px solid #77FFF3;
+}
+
+.title-container legend{
+    font-size: 4em;
+    height: 80px;
+}
+
+/* ---------- search----------*/
+.search {
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.searchbar{
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border:0;
+    border-radius: 12px;
+}
+.search i{
+    display: block;
+    font-size: 1.2em;
+    line-height: 50px;
+    padding-left: 16px;
+}
+
+.tutorial{
+    width: 900px;
+    margin: 0 auto;
+    margin-bottom:10px;
+}
+
+/* ---------- list ----------*/
+.category{
+    margin: 40px auto;
+}
+
+.list{
+    display: flex;
+    width: 600px;
+    margin: 0 180px;
+    /* cursor: pointer; */
+    color: white;
+    transition: color 0.3s;
+    margin-bottom: 40px;
+}
+
+.list-tag{
+    flex-grow: 1;
+    display: inline;
+}
+
+.list-tag:hover{
+    color: #77FFF3;
+    font-weight: bold;
+}
+
+.list-tag .active {
+    color: #77FFF3;
+}
+
+/* ---------- tag ----------*/
+.hashtag{
+    display: flex;
+    gap:12px;
+    width: 860px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.tag{
+    border: 1px solid #77FFF3;
+    height:30px;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 30px;
+    padding:4px 10px;
+    border-radius: 15px;
+}
+
+.tag:hover{
+    color: #77FFF3;
+    font-weight: bold;
+}
+
+/* ---------- songs ----------*/
+.songs{
+    width: 860px;
+    margin: 0 auto 200px;
+}
+
+.songs ul{
+}
+
+.songs li{
+    display: flex;
+    align-items: center;
+    position: relative; 
+    padding: 20px 0; 
+}
+
+.songs img{
+    width: 60px;
+    padding-right: 40px;
+}
+.songs p{
+    font-size: 1.2em;
+    margin: 0;
+    flex-grow: 1; 
+}
+.songs i{
+    font-size: 1.2em; 
+}
+
+
+.line{
+    border-bottom: 1px dotted white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ---------- player ----------*/
+.player-fixed{
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+    left: 0; 
+    z-index: 1000; 
+    background-color: #00255c;
+}
+.player{
+    width: 900px;
+    height:70px;
+    margin: 0 auto;
+    display: flex;
+    position: relative; 
+    align-items: center;    
+}
+
+.player img{
+    width: 40px;
+    padding-right: 20px;
+}
+.player .wave{
+    width: 200px;
+}
+
+.player p{
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+.player-function {
+    display: flex;
+    width: 90%;
+    justify-content: space-around; 
+}
+
+.player-function li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- footer ----------*/
+.footer {
+    margin: 0 auto;
+    text-align: center;
+    height: 62px;
+    line-height: 62px;
+}
