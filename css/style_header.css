@@ -57,27 +57,58 @@
     position: absolute;
     display: none;
     letter-spacing: 0;
-    background-color: rgba(1, 37, 91, 0.4);
+    background-color: rgba(1, 37, 91, .7);
     border-radius:0 0 20px 20px;
+    padding: 0;
+}
+
+.bar ol li{
+    text-align: center;
 }
 
 /* ---------- hover and show ----------*/
 .bar a:hover{
     color: #77FFF3;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 20px;
 }
   
 .bar ol a:hover{
     color: #77FFF3;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 20px;
 }
   
 .bar li:hover ol{
     display: block;
     top: 100%; 
-    left: 0;   
-    width: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px; 
     z-index: 1000; 
+}
+
+/* ---------- back to the top ----------*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+.btn-top svg{
+    width: 40px;
+}
+
+.btn-top{
+    position: fixed;
+    bottom:30px;
+    right:60px;
+
+}
+
+.btn-top svg:hover path{
+    stroke:#77FFF3;  
+}
+
+.btn-top svg:hover rect{
+    fill-opacity: 1;
 }
