@@ -8,7 +8,7 @@ body{
     color: white;
     font-size: 16px;
     letter-spacing: 4px;
-    text-shadow: 0 2px 2px rgba(0,0,0,.6);
+    text-shadow: 0 2px 2px rgba(0,0,0,.7);
 }
 
 .wrapper {
@@ -28,6 +28,7 @@ body{
     justify-content: space-between;
     width: 400px;
     border-bottom: 8px solid #77FFF3;
+    box-shadow: 0 2px 0px rgba(0,0,0,.5);
 }
 
 .title-container legend{
@@ -63,7 +64,14 @@ iframe{
 }
 
 .player img {
-    width: 100%;
+    width: 100px;
+    height: 76px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.player img:hover {
+    transform: scale(1.1);
 }
 
 /*---------- arrow left and right ----------*/
