@@ -6,7 +6,7 @@
     top: 0; 
     left: 0; 
     z-index: 1000; 
-    background: rgba(1, 37, 91, 0.4);
+    background: rgba(1, 37, 91, 0.6);
 }
 
 .bar {
@@ -58,7 +58,7 @@
     position: absolute;
     display: none;
     letter-spacing: 0;
-    background-color: rgba(1, 37, 91, .7);
+    background-color: rgba(1, 37, 91, .6);
     border-radius:0 0 20px 20px;
     padding: 0;
 }
@@ -104,6 +104,7 @@ html{
     bottom:30px;
     right:60px;
 
+    z-index: 2000; 
 }
 
 .btn-top svg:hover path{

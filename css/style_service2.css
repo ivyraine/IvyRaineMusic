@@ -72,6 +72,7 @@ h2{
 }
 
 .item-container {
+    display: block;
     height: 280px;
     text-decoration: none;
     color: white;
@@ -150,6 +151,12 @@ h2{
     position: relative;
 }
 
+.item2-content1 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
 .item-content1 p{
     position: absolute;
     font-size: 4em;
@@ -160,6 +167,12 @@ h2{
 .item2-content2{
     background-image: url(../image/item2.png);
     flex-grow: 1;
+}
+
+.item2-content2 a{
+    text-decoration: none;
+    color: white;
+    display: block;
 }
 
 .item-content2 p{
@@ -173,9 +186,21 @@ h2{
     flex-grow: 1;
 }
 
+.item2-content3 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
 .item2-content4{
     background-image: url(../image/item4.png);
     flex-grow: 1;
+}
+
+.item2-content4 a{
+    text-decoration: none;
+    color: white;
+    display: block;
 }
 
 .item2-content5{
@@ -183,9 +208,21 @@ h2{
     flex-grow: 1;
 }
 
+.item2-content5 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
 .item2-content6{
     background-image: url(../image/item6.png);
     flex-grow: 1;
+}
+
+.item2-content6 a{
+    text-decoration: none;
+    color: white;
+    display: block;
 }
 
 .item2 li:hover{
