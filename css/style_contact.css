@@ -18,17 +18,23 @@ body {
 }
 
 /* ---------- main ----------*/
-ul{
+.main-container ul{
+    position: relative;
+    height: 100vh;
+
     display:flex;
 }
 
 .main{
+    position: absolute;
+    bottom: 120px;
+    left: 40px;
+
     width: 700px;
-    height: calc(100vh - 80px);
 }
 
 .title-container{
-    margin: 240px 80px 30px;
+    margin: 240px 40px 30px;
 
     display: flex;
     justify-content: space-between;
@@ -43,7 +49,7 @@ ul{
 }
 
 .main p{
-    margin: 0 80px;
+    margin: 0 40px;
     font-size: 1.4em;
     line-height: 1.8;
     width: 580px;
@@ -52,13 +58,17 @@ ul{
 
 /* ---------- form ----------*/
 .form {
-    width: 400px;
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+
+    width: 360px;
     margin-top: 80px;
 
 }
 
 ol{
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .form p{
@@ -94,10 +104,6 @@ ol{
     margin: 0 auto;
 }
 
-
-
-
-
 /* ---------- contact ----------*/
 .contact {
     margin: 20px auto;
@@ -108,10 +114,12 @@ ol{
     display: flex;
 }
 
-.info{}
+.info{
+    margin-left: 30px;
+}
 
 .contact li{
-    margin-right: 90px;
+    margin-right: 80px;
 }
 
 
