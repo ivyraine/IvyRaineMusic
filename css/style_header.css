@@ -60,7 +60,7 @@
     position: absolute;
     display: none;
     letter-spacing: 0;
-    background: linear-gradient(to top, rgba(1, 37, 91, 1)50%, rgba(1, 37, 91, 0));
+    background: linear-gradient(to top, rgba(1, 37, 91, .9)45%, rgba(1, 37, 91, 0));
     border-radius:0 0 20px 20px;
     padding: 0;
     border-radius: 0 0 20px 20px;
