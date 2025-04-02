@@ -167,7 +167,9 @@ body{
     bottom: 0; 
     left: 0; 
     z-index: 1000; 
-    background-color: #00255c;
+    /* background-color: #00255c; */
+    background: linear-gradient(to top, rgba(1, 37, 91, 1) 60%, rgba(1, 37, 91, 0));
+
 }
 .player{
     width: 900px;

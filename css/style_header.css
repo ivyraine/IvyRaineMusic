@@ -6,7 +6,9 @@
     top: 0; 
     left: 0; 
     z-index: 1000; 
-    background: rgba(1, 37, 91, 0.6);
+    /* background: rgba(1, 37, 91, 0.6); */
+    background: linear-gradient(to bottom, rgba(1, 37, 91, 1) 40%, rgba(1, 37, 91, 0));
+    padding-bottom: 5px;
 }
 
 .bar {
@@ -58,9 +60,11 @@
     position: absolute;
     display: none;
     letter-spacing: 0;
-    background-color: rgba(1, 37, 91, .6);
+    background: linear-gradient(to top, rgba(1, 37, 91, 1)50%, rgba(1, 37, 91, 0));
     border-radius:0 0 20px 20px;
     padding: 0;
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 5px;
 }
 
 .bar ol li{
@@ -86,8 +90,9 @@
     left: 50%;
     transform: translateX(-50%);
     width: 230px; 
-    z-index: 1000; 
+    z-index: 999; 
 }
+
 
 /* ---------- back to the top ----------*/
 
