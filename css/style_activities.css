@@ -7,7 +7,7 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     color: white;
     font-size: 16px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-shadow: 0 2px 2px rgba(0,0,0,.7);
 }
 
@@ -27,16 +27,13 @@ body {
     bottom: 150px;
     right: 100px;
 
-    display: flex;
-    justify-content: space-between;
+    font-size: 6em;
+    height: 118px;
+    text-align-last: justify;
+    letter-spacing: 0px;
     width: 500px;
     border-bottom: 8px solid #77FFF3;
     box-shadow: 0 2px 0px rgba(0,0,0,.5);
-}
-
-.title-container legend{
-    font-size: 6em;
-    height: 116px;
 }
 
 /* ---------- album ----------*/
@@ -63,7 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* cursor: pointer; */
+    cursor: pointer;
     color: white;
     transition: transform 0.3s;
     transition: color 0.3s;
@@ -83,10 +80,14 @@ body {
 }
 
 .album-grid {
-    display: grid;
+    display: none; 
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 40px;
+}
+
+.album-grid.active-tab {
+    display: grid;
 }
 
 .album-grid-item {
@@ -105,8 +106,41 @@ body {
     transform: scale(1.1);
 }
 
+/* ---------- Modal 樣式 ----------*/
+.modal-content {
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 1px solid #77FFF3;
+}
+
+/* .modal-header {
+    border-bottom: 1px solid #77FFF3;
+} */
+
+.modal-title {
+    color: #77FFF3;
+    text-shadow: none;
+}
+
+.btn-close {
+    background-color: #77FFF3;
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+#modalImage {
+    max-height: 80vh;
+    width: auto;
+}
+
+.modal-backdrop {
+    opacity: 0.8 !important;
+}
+
 /* ---------- footer ----------*/
-.footer {
+footer {
     margin: 0 auto;
     text-align: center;
     height: 62px;

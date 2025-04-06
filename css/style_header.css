@@ -1,12 +1,11 @@
 @import url(reset.css);
 
-.header{
+header{
     width: 100%;
     position: fixed;
     top: 0; 
     left: 0; 
     z-index: 1000; 
-    /* background: rgba(1, 37, 91, 0.6); */
     background: linear-gradient(to bottom, rgba(1, 37, 91, 1) 40%, rgba(1, 37, 91, 0));
     padding-bottom: 5px;
 }
@@ -19,16 +18,26 @@
     align-items: center;
 }
 
-.bar img {
-    height: 60%;
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    height: 30px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.logo-area p {
+    margin-left: 15px;
+    color: white;
+    white-space: nowrap;
 }
 
 .bar img:hover{
     transform: scale(1.2);
-}
-
-.bar p {
-    margin: 20px;
 }
 
 .bar ul {
@@ -92,7 +101,6 @@
     width: 230px; 
     z-index: 999; 
 }
-
 
 /* ---------- back to the top ----------*/
 

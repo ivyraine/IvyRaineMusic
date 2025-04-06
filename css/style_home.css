@@ -6,7 +6,7 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     color: white;
     font-size: 16px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-shadow: 0 2px 2px rgba(0,0,0,.7);
 }
 
@@ -24,7 +24,7 @@ body {
 
 }
 
-.main legend {
+.main h1 {
     font-size: 6em;
     font-weight: bold;
     margin: 0 auto;
@@ -63,24 +63,20 @@ body {
 
 .subtitle-container{
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    font-size: 1.6em;
+    text-align-last: justify;
+    letter-spacing: 0px;
+    height: 34px;
+
     width: 100px;
     border-bottom: 4px solid #77FFF3;
     box-shadow: 0 2px 0px rgba(0,0,0,.5);
-
-}
-
-.main h3 {
-    font-size: 1.6em;
-    height: 36px;
 }
 
 .main p {
     padding-top: 20px;
-    /* text-align: justify; */
     line-height: 1.5;
-
+    text-align:justify;
 }
 
 /* ---------- other content_service ----------*/
@@ -99,17 +95,14 @@ body {
 
 
 .title-container{
-    display: flex;
-    justify-content: space-between;
-    width: 160px;
-    border-bottom: 6px solid #77FFF3;
-    box-shadow: 0 2px 0px rgba(0,0,0,.5);
-}
-
-.content h2 {
     font-size: 2em;
-    height: 4px;
-    margin: 40px 0;
+    letter-spacing: 0px;
+    height: 40px;
+    margin: 30px 0 10px;
+    text-align-last: justify;
+    width: 160px;
+    border-bottom: 4px solid #77FFF3;
+    box-shadow: 0 2px 0px rgba(0,0,0,.5);
 }
 
 .content p {
@@ -202,12 +195,6 @@ body {
     margin-right: 80px;
 }
 
-.contact h2 {
-    font-size: 2em;
-    height: 36px;
-    margin: 40px 0 10px;
-}
-
 .contact i{
     color: white;
     width: 40px;
@@ -217,7 +204,6 @@ body {
 .contact p {
     padding: 10px 0;
     text-align: justify;
-
 }
 
 .contact img {
@@ -226,12 +212,12 @@ body {
 }
 
 .follow li{
-    padding:20px 0;
+    padding:40px 0;
     margin-right: 15px;
 }
 
 /* ---------- footer ----------*/
-.footer {
+footer {
     margin: 0 auto;
     text-align: center;
     height: 62px;

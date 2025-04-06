@@ -7,7 +7,7 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     color: white;
     font-size: 16px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-shadow: 0 2px 2px rgba(0,0,0,.7);
 }
 
@@ -35,17 +35,14 @@ body {
 
 .title-container{
     margin: 240px 40px 30px;
+    font-size: 6em;
+    height: 118px;
 
-    display: flex;
-    justify-content: space-between;
+    text-align-last: justify;
+    letter-spacing: 0px;
     width: 400px;
     border-bottom: 8px solid #77FFF3;
     box-shadow: 0 2px 0px rgba(0,0,0,.5);
-}
-
-.title-container legend{
-    font-size: 6em;
-    height: 116px;
 }
 
 .main p{
@@ -64,7 +61,6 @@ body {
 
     width: 360px;
     margin-top: 80px;
-
 }
 
 ol{
@@ -124,17 +120,14 @@ ol{
 
 
 .subtitle-container{
-    display: flex;
-    justify-content: space-between;
-    width: 160px;
-    border-bottom: 6px solid #77FFF3;
-    box-shadow: 0 2px 0px rgba(0,0,0,.5);
-}
-
-.contact h2 {
     font-size: 2em;
-    height: 36px;
+    height: 40px;
     margin: 30px 0 10px;
+    text-align-last: justify;
+    letter-spacing: 0px;
+    width: 160px;
+    border-bottom: 4px solid #77FFF3;
+    box-shadow: 0 2px 0px rgba(0,0,0,.5);
 }
 
 .contact i{
@@ -159,7 +152,7 @@ ol{
 }
 
 /* ---------- footer ----------*/
-.footer {
+footer {
     margin: 0 auto;
     text-align: center;
     height: 62px;
