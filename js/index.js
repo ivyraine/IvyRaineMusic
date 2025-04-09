@@ -13,12 +13,14 @@ window.addEventListener("load", () => {
 
 
 // 照片跑馬燈
-    const marquee = document.getElementById('marquee');
-
-    marquee.addEventListener('mouseenter', () => {
-      marquee.classList.add('paused');
-    });
-
-    marquee.addEventListener('mouseleave', () => {
-      marquee.classList.remove('paused');
+    document.addEventListener('DOMContentLoaded', () => {
+      const marquee = document.getElementById('marquee');
+    
+      marquee.addEventListener('mouseenter', () => {
+        marquee.classList.add('paused');
+      });
+    
+      marquee.addEventListener('mouseleave', () => {
+        marquee.classList.remove('paused');
+      });
     });

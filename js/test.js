@@ -1,128 +1,33 @@
-function createPlayer(name, data = {}) {
-  const 
-      audio      = document.createElement('audio'),
-      player     = document.createElement('div'),
-      info       = document.createElement('div'),
-      controller = document.createElement('div')
-
-  audio.hidden = true
-  audio.id     = name
-  audio.src    = data?.src ?? ''
-
-  player.classList.add('player')
-
-  // Informacao
-  const
-      img      = document.createElement('img'),
-      title    = document.createElement('h3'),
-      subTitle = document.createElement('h4')
-
-  img.src = data?.img ?? 'logo.png'
-
-  title.textContent = data?.title ?? 'Uninformed'
-  subTitle.textContent = data?.subTitle ?? ''
-
-  title.title = data?.title ?? 'Uninformed'
-  subTitle.title = data?.subTitle ?? ''
-
-  info.append(img, title, subTitle)
-  player.appendChild(info)
-
-  // Controller
-  const
-      controllers = document.createElement('div'),
-      imgNext     = document.createElement('img'),
-      imgPrev     = document.createElement('img'),
-      imgPlay     = document.createElement('img'),
-      bar         = document.createElement('div'),
-      processBar  = document.createElement('div'),
-      time        = document.createElement('div'),
-      duration    = document.createElement('span'),
-      currentTime = document.createElement('span')
-
-  imgPrev.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAABtElEQVQ4jWMY+uD///8EcUfTNK/r1+6uOnPq8hxi1D569HwHTC1exVEB2UIghSANjx49/w+iCzIb9LCpTY0tV0BXGxWQzcyCKwq2bTnQ2DGpxpyBgcEdSRjELsOmtra1AJtaNiZ0xZ3N071uXL+3SldfA10DBpjavzD88eMXO/CoZYZbEB2YI3T29JU5UQmBedw8XKH4DC/OatIDOcIvxD0Rqg6b2v8MDAzfGEHhB/IiMS4GgVcv3jCISYgQUgYGFXktnEydzdO8iDUcBIg1HAoEmF49f/OMgYGBnRRdJAAl5mOn978ozW0+pKmtKsTNw/WegYFBAZ/+k0fPVbCxsT4nRu2e7YemgCN51qLO+8amOnHLF6zr/frl20YGBoYDuDQdPXR6J0wtVB1OtQwMDO9QkmlZbdYWDU2lgH07Dq8ioBGsVlZWwvHk0bM78Kj9iZEPQCA+NXR6c3V/0qsXbxYTsigkwrtzQvusQhxqf+PMyaBgY2BgiOtqnubjF+LxkZuHix8k/vXL94/oanun1V2AqY1MCELxAVGFHQhP6VsQ3dk01YdYtbVl3Xbgwm5oAwYGBgA7hlhPwuBYTAAAAABJRU5ErkJggg=='
-  imgNext.src = ' data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABKklEQVQ4jWNwMguzPrDvZOiZU5djCjIbNf7//89ACmaY0jff4tGj5/+heOGZU5c7STGAiZuHW4oBAeLEJEQkHj9+sXDB7NURDEQAJgYGBjE0ZXEg7Oxh63n29JXOwqwmDXzGsDAwMDzFIQdyDUNRZZrE2dNXXhib6pRjUwRywUMCDsXrLZAB74jwKk5vgbzAS4QByK5B8RbIBcokGIBskMSU/oU+IAO+kGEACEjdvf3wMcgLX0nUuOfrl2+fli1YN6F/Wt1FkAt+kqJ505qd8zQ0lYKbOksOM0AD8TcxGi9fvH5i6dy1E5aun/IWWYKQAXDngmz08nHEUADyAi4DMJyLDYBc8I9Y52I14OWL17BoJOhcbIBRU9pB0tPP0Z+bl+sqPqdiBQwMDACvUdjLFtm1SgAAAABJRU5ErkJggg=='
-  imgPlay.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABKklEQVQ4jWNwMguzPrDvZOiZU5djCjIbNf7//89ACmaY0jff4tGj5/+heOGZU5c7STGAiZuHW4oBAeLEJEQkHj9+sXDB7NURDEQAJgYGBjE0ZXEg7Oxh63n29JXOwqwmDXzGsDAwMDzFIQdyDUNRZZrE2dNXXhib6pRjUwRywUMCDsXrLZAB74jwKk5vgbzAS4QByK5B8RbIBcokGIBskMSU/oU+IAO+kGEACEjdvf3wMcgLX0nUuOfrl2+fli1YN6F/Wt1FkAt+kqJ505qd8zQ0lYKbOksOM0AD8TcxGi9fvH5i6dy1E5aun/IWWYKQAXDngmz08nHEUADyAi4DMJyLDYBc8I9Y52I14OWL17BoJOhcbIBRU9pB0tPP0Z+bl+sqPqdiBQwMDACvUdjLFtm1SgAAAABJRU5ErkJggg=='
-
-  bar.classList.add('bar')
-
-  bar.addEventListener('click', (event) => {
-      let 
-          tmp = (event.clientX - bar.offsetLeft),
-          width = bar.style.width
-
-      tmp = (tmp / bar.clientWidth * 100)
-      
-      audio.currentTime = audio.duration / 100 * tmp
-  })
-
-  duration.textContent    = '00:00'
-  currentTime.textContent = '00:00'
-
-  imgPrev.addEventListener('click', () => {
-      audio.pause()
-      audio.currentTime = 0
-      audio.play()
-  })
-
-  imgNext.addEventListener('click', () => audio.currentTime = audio.duration)
-
-  const updatePlayer = () => {
-      imgPlay.src = (audio.paused)
-          ? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABKklEQVQ4jWNwMguzPrDvZOiZU5djCjIbNf7//89ACmaY0jff4tGj5/+heOGZU5c7STGAiZuHW4oBAeLEJEQkHj9+sXDB7NURDEQAJgYGBjE0ZXEg7Oxh63n29JXOwqwmDXzGsDAwMDzFIQdyDUNRZZrE2dNXXhib6pRjUwRywUMCDsXrLZAB74jwKk5vgbzAS4QByK5B8RbIBcokGIBskMSU/oU+IAO+kGEACEjdvf3wMcgLX0nUuOfrl2+fli1YN6F/Wt1FkAt+kqJ505qd8zQ0lYKbOksOM0AD8TcxGi9fvH5i6dy1E5aun/IWWYKQAXDngmz08nHEUADyAi4DMJyLDYBc8I9Y52I14OWL17BoJOhcbIBRU9pB0tPP0Z+bl+sqPqdiBQwMDACvUdjLFtm1SgAAAABJRU5ErkJggg==' 
-          : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAaElEQVQ4jWOgFDCC9D9+/GIhAwNDHJJZi2RkxOORzX7y5CWGGllZiXiYAf/RHSIjI86IZgCGGllZCUYmSr0wasCoAaMGQAALiPj65ds6bh4uPgYGBhcGBoY9X798+4SukBg1pAMGBgYAdXcjO7NTRb4AAAAASUVORK5CYII='
-  }
-
-  imgPlay.addEventListener('click', () => (audio.paused) ? audio.play() : audio.pause())
-  audio.addEventListener('playing', () => updatePlayer())
-  audio.addEventListener('pause', () => updatePlayer())
-
-  audio.addEventListener('timeupdate', () => {
-      currentTime.textContent = ajusteTextTime(audio.currentTime)
-      duration.textContent    = ajusteTextTime(audio.duration)
-      processBar.style.width  = parseInt(audio.currentTime / audio.duration * 100) + '%'
-  })
-
-  controllers.append(imgPrev, imgPlay, imgNext)
-  bar.appendChild(processBar)
-  time.append(currentTime, duration)
-
-  controller.append(controllers, bar, time)
-
-  player.audio = audio
-
-  player.appendChild(controller)
-
-  return player
-}
-
-function ajusteTextTime(time) {
-  if (isNaN(time)) {
-      time = 0
-  }
-
-
-  time = time.toFixed(2)
-
-  let 
-      minutos = parseInt((time > 59) ? time / 60 : 0),
-      segundos = parseInt(time % 60)
-
-  minutos = ('00' + minutos).slice(-2)
-  segundos = ('00' + segundos).slice(-2)
-  
-  return minutos + ':' + segundos
-}
-
-window.onload = () => {
-  const player = createPlayer('player_html', {
-      src: 'https://pl.meln.top/mr/242971d39dd4abd59c0d7a2d5c144f73.mp3',
-      img: 'https://i.scdn.co/image/ab67616d00001e020cd942c1a864afa4e92d04f2',
-      title: 'Violent Crimes',
-      subTitle: 'Kanye West'
-  })
-
-  player.audio.volume = 0.2
-
-  document.getElementById('main').appendChild(player)
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const tracks = document.querySelectorAll('.track');
+    const playerContainer = document.getElementById('playerContainer');
+    const soundcloudPlayer = document.getElementById('soundcloudPlayer');
+    const closePlayer = document.getElementById('closePlayer');
+    
+    // 为每个歌曲添加点击事件
+    tracks.forEach(track => {
+        const playButton = track.querySelector('.track-play');
+        playButton.addEventListener('click', function() {
+            const trackUrl = track.dataset.trackUrl;
+            const trackTitle = track.querySelector('.track-title').textContent;
+            
+            // 构建 SoundCloud 嵌入链接
+            // 注意：您需要将以下URL替换为实际的 SoundCloud 曲目 URL
+            const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(trackUrl)}&color=%23ff5500&auto_play=true&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true`;
+            
+            // 更新 iframe 的 src
+            soundcloudPlayer.src = embedUrl;
+            
+            // 显示播放器
+            playerContainer.classList.add('active');
+            
+            console.log(`正在播放: ${trackTitle}`);
+        });
+    });
+    
+    // 关闭播放器
+    closePlayer.addEventListener('click', function() {
+        playerContainer.classList.remove('active');
+        soundcloudPlayer.src = '';
+    });
+});

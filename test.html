@@ -1,189 +1,158 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>音樂跑馬燈</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/test.css">
+    <title>音樂播放列表</title>
+    <script src = "./js/test.js"></script>
+    <style>
 
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      padding-top: 50px;
-      background: #f7f7f7;
-    }
-
-    .marquee-container {
-      width: 100%;
-      max-width: 1100px;
-      overflow: hidden;
-      position: relative;
-      height: 300px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .marquee-track {
-      display: flex;
-      gap: 10px;
-      animation: scroll-left 20s linear infinite;
-    }
-
-    .marquee-container.paused .marquee-track {
-      animation-play-state: paused;
-    }
-
-    .track-item {
-      width: 220px;
-      height: 220px;
-      text-align: center;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .track-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .track-info {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 10px;
-      font-size: 14px;
-      text-align: left;
-    }
-
-    .track-info .track-title {
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .play-btn {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 5px 15px;
-      border-radius: 30px;
-      cursor: pointer;
-      display: none;
-    }
-
-    .track-item:hover .play-btn {
-      display: block;
-    }
-
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-  </style>
+    </style>
 </head>
 <body>
+    <div class="container">
+        <!-- <header class="header">
+            <div class="logo">音樂雲</div>
+            <div class="nav-links">
+                <a href="#">首頁</a>
+                <a href="#">探索</a>
+                <a href="#">圖書館</a>
+                <a href="#">搜尋</a>
+            </div>
+        </header>
+        
+        <main>
+            <div class="playlist-header">
+                <div class="playlist-cover">
+                    <div style="color: #aaa; font-size: 20px;">封面圖片</div>
+                </div>
+                <div class="playlist-info">
+                    <h1 class="playlist-title">我的最愛音樂合集</h1>
+                    <div class="playlist-creator">由 用戶名稱 創建</div>
+                    <div class="playlist-stats">
+                        <span>12 首歌曲</span>
+                        <span>43 分鐘</span>
+                        <span>1,234 次播放</span>
+                        <span>87 個讚</span>
+                    </div>
+                    <button class="play-button">
+                        <span>播放全部</span>
+                    </button>
+                </div>
+            </div> -->
+            
+            <div class="tracks-container">
+                <!-- 歌曲 1 -->
+                <div class="track" data-track-id="1">
+                    <div class="track-number">1</div>
+                    <div class="track-photo"><img src="./image/songlist1.png" alt=""></div>
+                    <div class="track-info">
+                      <div class="track-title">Kung Fu Beauty</div>
+                  </div>
+                    <div class="track-play">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                
+                <!-- 歌曲 2 -->
+                <div class="track" data-track-id="2">
+                  <div class="track-number">2</div>
+                  <div class="track-photo"><img src="./image/songlist2.png" alt=""></div>
+                  <div class="track-info">
+                    <div class="track-title">Supreme Blessings</div>
+                </div>
+                  <div class="track-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                
+                <!-- 歌曲 3 -->
+                <div class="track" data-track-id="3">
+                  <div class="track-number">3</div>
+                  <div class="track-photo"><img src="./image/songlist3.png" alt=""></div>
+                  <div class="track-info">
+                    <div class="track-title">Fortune Cookie</div>
+                </div>
+                  <div class="track-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+    
+    <div class="audio-player">
+      <div class="player-info">
+        <div class="player-thumbnail">
+          <img src="./image/songlist1.png" alt="">
+        </div>
+        <div>
+            <div class="player-track-title">Kung Fu Beauty</div>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="player-time">
+            <span>1:30</span>
+            <span>3:45</span>
+        </div>
+      </div>
+        <div class="player-controls">
+            <div class="player-backward">⏮</div>
+            <div class="player-control primary">
+                <div class="play-icon"></div>
+            </div>
+            <div class="player-forward">⏭</div>
+            <div class="player-volume">🔊</div>
+        </div> 
 
-  <div class="marquee-container" id="marquee">
-    <div class="marquee-track" id="track">
-      <!-- 每個音樂封面 -->
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 1" />
-        <div class="track-info">
-          <div class="track-title">Song Title 1</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(1)">Play</button>
-      </div>
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 2" />
-        <div class="track-info">
-          <div class="track-title">Song Title 2</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(2)">Play</button>
-      </div>
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 3" />
-        <div class="track-info">
-          <div class="track-title">Song Title 3</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(3)">Play</button>
-      </div>
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 4" />
-        <div class="track-info">
-          <div class="track-title">Song Title 4</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(4)">Play</button>
-      </div>
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 5" />
-        <div class="track-info">
-          <div class="track-title">Song Title 5</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(5)">Play</button>
-      </div>
-      
-      <!-- 重複音樂項目，讓滾動無縫 -->
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 1" />
-        <div class="track-info">
-          <div class="track-title">Song Title 1</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(1)">Play</button>
-      </div>
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 2" />
-        <div class="track-info">
-          <div class="track-title">Song Title 2</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(2)">Play</button>
-      </div>
-      <div class="track-item">
-        <img src="https://via.placeholder.com/220" alt="Track 3" />
-        <div class="track-info">
-          <div class="track-title">Song Title 3</div>
-          <div>Artist Name</div>
-        </div>
-        <button class="play-btn" onclick="playTrack(3)">Play</button>
-      </div>
     </div>
-  </div>
 
-  <script>
-    // 播放音樂的簡單函式（示範，實際可用 <audio> 元素替換）
-    function playTrack(trackId) {
-      alert('播放音樂：Track ' + trackId);
-    }
+    <!-- <script>
+        // 播放功能的簡單示例
+        document.addEventListener('DOMContentLoaded', function() {
+            const tracks = document.querySelectorAll('.track');
+            const playButton = document.querySelector('.play-button');
+            const playerPlayButton = document.querySelector('.player-control.primary');
+            let isPlaying = false;
+            
+            // 更新播放按鈕圖標
+            function updatePlayButton(playing) {
+                isPlaying = playing;
+                if (isPlaying) {
+                    playerPlayButton.innerHTML = '<div class="pause-icon"></div>';
+                } else {
+                    playerPlayButton.innerHTML = '<div class="play-icon"></div>';
+                }
+            }
+            
+            // 點擊主播放按鈕
+            playButton.addEventListener('click', function() {
+                updatePlayButton(!isPlaying);
+            });
+            
+            // 點擊播放器控制按鈕
+            playerPlayButton.addEventListener('click', function() {
+                updatePlayButton(!isPlaying);
+            });
+            
+            // 點擊單曲
+            tracks.forEach((track, index) => {
+                const trackPlay = track.querySelector('.track-play');
+                trackPlay.addEventListener('click', function() {
+                    // 更新播放狀態
+                    updatePlayButton(true);
+                    
+                    // 更新播放器信息
+                    const title = track.querySelector('.track-title').textContent;
+                    const artist = track.querySelector('.track-artist').textContent;
+                    document.querySelector('.player-track-title').textContent = title;
+                    document.querySelector('.player-track-artist').textContent = artist;
+                });
+            });
+        });
+    </script> -->
 
-    // 控制跑馬燈的暫停與繼續
-    const marquee = document.getElementById('marquee');
-    marquee.addEventListener('mouseenter', () => {
-      marquee.classList.add('paused');
-    });
-
-    marquee.addEventListener('mouseleave', () => {
-      marquee.classList.remove('paused');
-    });
-  </script>
-
+<script src="https://w.soundcloud.com/player/api.js"></script>
 </body>
 </html>
