@@ -7,9 +7,8 @@ window.addEventListener("load", () => {
         // 顯示文字
         document.getElementById("brand-text").classList.add("show");
         document.getElementById("notes").classList.add("show");
-    }),1000; // 給多一點緩衝
+    },1600); // 給多一點緩衝
     
-
 });
 
 

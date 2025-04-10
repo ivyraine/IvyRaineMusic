@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/logo2.png">
-    <link rel="stylesheet" href="css/style_header.css">
-    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <title>Ivy Raine Music</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -23,7 +21,7 @@
     <div class="top"></div>
     <header>
         <!---------- bar ---------->
-        <div class="bar">
+        <nav class="bar">
             <div class="logo-area">
                 <a href="index.html"><img src="image/logo.png" alt=""></a>
                 <p>Ivy Raine Music</p>
@@ -43,7 +41,7 @@
                 <li><a href="service2.html">Service</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
    <!---------- main ---------->
@@ -83,7 +81,7 @@
 
     <div class="wrapper">
 
-        <div class="main">
+        <div class="intro">
             <ul>
                 <li data-aos="zoom-out" data-aos-duration="1500"
                 data-aos-easing="ease-in-out">
@@ -118,9 +116,8 @@
                 <div class = "title-container">服務項目</div>
                 <ul>
                     <li>
-                        <p >作曲、編曲、影像配樂、混音後製、音效設計、Podcast剪輯
-                            <br>後製、編曲教學、吉他教學。</p>
-                        <a href="about.html">Explore more >></a>
+                        <p >作曲、編曲、影像配樂、混音後製、音效設計、Podcast剪輯後製、編曲教學、吉他教學。</p>
+                        <a class = "more1" href="about.html">Explore more >></a>
                     </li>
 
                     <img class=smalllogo src="./image/logo.png" alt="">
@@ -142,7 +139,7 @@
                     </ul>
                 </div>
 
-                <a class="more2" href="portfolio2.html">Listen more >></a>
+                <a class="more" href="portfolio2.html">Listen more >></a>
             </div>
             
             <!---------- activities ---------->
@@ -169,7 +166,7 @@
                     </div>
                   </div>
 
-                <a class="more2" href="activities.html">Explore more >></a>
+                <a class="more" href="activities.html">Explore more >></a>
                 </div>
             
         </div>
@@ -180,11 +177,12 @@
         data-aos-easing="ease-in-out">
 
             <ul class="info">
-                <li>
-                    <img src="./image/studio_photo.png" alt="">
+                <li class = "info-detail">
+                    <img class="info-photo1" src="./image/studio_photo.jpg" alt="">
+                    <img class="info-photo2" src="./image/studio_photo2.jpg" alt="">
                 </li>
 
-                <li>
+                <li class = "info-detail">
                     <div class = "title-container">聯絡資訊</div>
                     <p></p>
                     <p><i class="fa-regular fa-envelope"></i>ivyrainestudio@gmail.com</p>
@@ -192,12 +190,11 @@
                     <p><i class="fa-solid fa-phone"></i>0910-123-456</p>
 
                     <ul class="follow">
-                        <li >追蹤更多  </a></li>
-                        <li > </a></li>
-                        <li ><a href="https://www.facebook.com/ivyrainemusic/" target=”_blank”><i class="fa-brands fa-square-facebook"></i></a></li>
-                        <li ><a href="https://www.youtube.com/@ivy_raine"target=”_blank”><i class="fa-brands fa-youtube"></i></a></li>
-                        <li ><a href="https://www.instagram.com/ivyrainelin/" target=”_blank”><i class="fa-brands fa-instagram"></i></a></li>
-                        <li ><a href="https://soundcloud.com/ivy_raine/sets" target=”_blank”><i class="fa-brands fa-soundcloud"></i></a></li>
+                        <li class ="follow-more">追蹤更多</li>
+                        <li><a href="https://www.facebook.com/ivyrainemusic/" target=”_blank”><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/@ivy_raine"target=”_blank”><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/ivyrainelin/" target=”_blank”><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://soundcloud.com/ivy_raine/sets" target=”_blank”><i class="fa-brands fa-soundcloud"></i></a></li>
                     </ul>
                 </li>
             </ul>
