@@ -88,11 +88,16 @@ header{
     transform: scale(1.2);
 }
 
+.bar i{
+  display: none;
+}
+
 .bar ul {
     display: flex;
     /* outline: 1px solid red; */
     width: 700px;
     margin-left: auto;
+    
 }
 
 .bar li {
@@ -114,8 +119,7 @@ header{
 .bar ol{
     position: absolute;
     display: none;
-    letter-spacing: 0;
-    background: linear-gradient(to top, rgba(1, 37, 91, .9)45%, rgba(1, 37, 91, 0));
+    background: linear-gradient(to top, rgba(1, 37, 91, 1)50%, rgba(1, 37, 91, 0));
     border-radius:0 0 20px 20px;
     padding: 0;
     border-radius: 0 0 20px 20px;
@@ -129,13 +133,11 @@ header{
 /* ---------- submenu hover and show ----------*/
 .bar a:hover{
     color: #77FFF3;
-    /* font-weight: bold; */
     border-radius: 20px;
 }
   
 .bar ol a:hover{
     color: #77FFF3;
-    /* font-weight: bold; */
     border-radius: 20px;
 }
   
@@ -146,6 +148,18 @@ header{
     transform: translateX(-50%);
     width: 230px; 
     z-index: 999; 
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 黑色半透明遮罩 */
+  z-index: 999; /* 確保遮罩在內容之上，但在導航欄之下 */
+  display: none; /* 預設隱藏 */
+  transition: opacity 0.3s ease; /* 平滑過渡效果 */
 }
 
 /* ---------- back to the top ----------*/
@@ -163,7 +177,7 @@ html{
     bottom:30px;
     right:60px;
 
-    z-index: 2000; 
+    z-index: 800; 
 }
 
 .btn-top svg:hover path{
@@ -519,7 +533,10 @@ input {
     position: relative;
 }
 
-.content li {}
+.content li {
+  width:100%;
+
+}
 
 .content p {
     font-size: 20px;

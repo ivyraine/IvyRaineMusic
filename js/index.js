@@ -7,9 +7,63 @@ window.addEventListener("load", () => {
         // 顯示文字
         document.getElementById("brand-text").classList.add("show");
         document.getElementById("notes").classList.add("show");
-    },1600); // 給多一點緩衝
+    }); // 給多一點緩衝
     
 });
+
+//header 漢堡選單
+// $(function(){
+//     $('.bar i').click(function(){
+//         // $(this).addClass('active')
+//         $('.bar').toggleClass('active')
+//         $('.overlay').fadeToggle(300);
+//     })
+// })
+
+$(function(){
+    // 漢堡選單點擊
+    $('.bar i').click(function(e){
+        e.stopPropagation(); // 防止事件冒泡
+        $('.bar').toggleClass('active');
+        $('.overlay').fadeToggle(300);
+    });
+    
+    // 點擊遮罩時關閉選單
+    $('.overlay').click(function(){
+        $('.bar').removeClass('active');
+        $(this).fadeOut(300);
+    });
+   // 為有子選單的項目添加類別
+   $('.bar ul li:has(ol)').addClass('has-submenu');
+    
+   // 行動裝置模式下的子選單手風琴效果
+   if ($(window).width() <= 820) {
+       $('.bar ul li.has-submenu > a').click(function(e){
+           e.preventDefault(); // 阻止默認跳轉
+           
+           var $parent = $(this).parent();
+           
+           // 如果點擊的項目已經是活動狀態，則關閉它
+           if ($parent.hasClass('active')) {
+               $parent.removeClass('active');
+           } else {
+               // 關閉其他已開啟的子選單（手風琴效果）
+               $('.bar ul li.has-submenu.active').removeClass('active');
+               
+               // 開啟當前點擊的子選單
+               $parent.addClass('active');
+           }
+       });
+   }
+    
+    // 點擊頁面其他區域時關閉選單
+    $(document).click(function(e){
+        if (!$(e.target).closest('.bar ul').length && !$(e.target).closest('.bar i').length) {
+            $('.bar').removeClass('active');
+        }
+    });
+});
+
 
 
 // 照片跑馬燈
