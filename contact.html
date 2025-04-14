@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/logo2.png">
-    <link rel="stylesheet" href="css/style_header.css">
-    <link rel="stylesheet" href="css/style_contact.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Contact</title>
 </head>
 
-<body>
+<body class="contact_page">
     <div class="top"></div>
     <header>
         <!---------- bar ---------->
-        <div class="bar">
+        <nav class="bar">
             <div class="logo-area">
                 <a href="index.html"><img src="image/logo.png" alt=""></a>
                 <p>Ivy Raine Music</p>
             </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li>
                     <a href="portfolio2.html">Portfolio</a>
                     <ol>
-                        <li><a href="p_comp_arr.html">Composition & Arrangement</a></li>
+                        <li><a href="p_comp_arr.html">Music</a></li>
                         <li><a href="p_filmscore.html">Film Score</a></li>
                         <li><a href="p_sounddesign.html">Sound Design</a></li>
                     </ol>
@@ -36,32 +37,34 @@
                 <li><a href="service2.html">Service</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
+
+    <div class="overlay"></div>
 
     <div class="wrapper">
         <!---------- main ---------->
-        <div class = "main-container">
+        <div class = "contact-kc">
             <ul>
-                <li class="main">
-                    <div class="title-container">聯絡</div>
+                <li class="theme-container">
+                    <div class="theme">聯絡</div>
                     <p>歡迎任何形式的音樂與音效設計合作。
                     <br>Welcome any kind of music and audio design cooperation.</p>
                 </li>     
                 <li class="form">
-                    <ol>
+                    <ol class="form-group">
                         <p>Name</p>
                         <input class="name" type="text">
                     </ol>
-                    <ol>
+                    <ol class="form-group">
                         <p>E-mail</p>
                         <input class="mail" type="text">
                     </ol>
-                    <ol>
+                    <ol class="form-group">
                         <p>Message</p>
                         <textarea></textarea>
                     </ol>
-                    <ol>
+                    <ol class="form-group">
                         <input class="send" type="submit" value="Send">
                     </ol>
                 </li>    
@@ -70,27 +73,29 @@
      
 
         <!---------- contact ---------->
-        <div class="contact">
+        <div class="contact" data-aos = "fade-up" data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
 
             <ul class="info">
-                <li>
-                    <img src="./image/studio_photo.jpg" alt="">
+                <li class = "info-detail">
+                    <img class="info-photo1" src="./image/studio_photo.jpg" alt="">
+                    <img class="info-photo2" src="./image/studio_photo2.jpg" alt="">
                 </li>
 
-                <li>
-                    <div class = "subtitle-container">聯絡資訊</div>
+                <li class = "info-detail">
+                    <div class = "title">聯絡資訊</div>
                     <p></p>
-                    <p><i class="fa-regular fa-envelope"></i>ivyrainemusic@gmail.com</p>
+                    <p><i class="fa-regular fa-envelope"></i>ivyrainestudio@gmail.com</p>
                     <p><i class="fa-brands fa-line"></i>ivyrainemusic</p>
                     <p><i class="fa-solid fa-phone"></i>0910-123-456</p>
 
                     <ul class="follow">
-                        <li >追蹤更多  </a></li>
-                        <li > </a></li>
-                        <li ><a href="https://www.facebook.com/ivyrainemusic/" target=”_blank”><i class="fa-brands fa-square-facebook"></i></a></li>
-                        <li ><a href="https://www.youtube.com/@ivy_raine"target=”_blank”><i class="fa-brands fa-youtube"></i></a></li>
-                        <li ><a href="https://www.instagram.com/ivyrainelin/" target=”_blank”><i class="fa-brands fa-instagram"></i></a></li>
-                        <li ><a href="https://soundcloud.com/ivy_raine/sets" target=”_blank”><i class="fa-brands fa-soundcloud"></i></a></li>
+                        <li class ="follow-more">追蹤更多</li>
+                        <li><a href="https://www.facebook.com/ivyrainemusic/" target=”_blank”><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/@ivy_raine"target=”_blank”><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/ivyrainelin/" target=”_blank”><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://soundcloud.com/ivy_raine/sets" target=”_blank”><i class="fa-brands fa-soundcloud"></i></a></li>
                     </ul>
                 </li>
             </ul>

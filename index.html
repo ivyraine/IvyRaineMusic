@@ -18,11 +18,11 @@
 
 </head>
 
-<body>
+<body class = "front_page">
     <div class="top"></div>
     <header>
         <!---------- bar ---------->
-        <nav class=bar>
+        <nav class="bar">
             <div class="logo-area">
                 <a href="index.html"><img src="image/logo.png" alt=""></a>
                 <p>Ivy Raine Music</p>
@@ -50,16 +50,7 @@
 
    <!---------- main ---------->
    <section>
-        <input id="logo" type="checkbox"/>
-        <label for="logo">
-            <div class="logo"></div>
-            <!-- <div class="pulser"></div>
-            <div class="pulser"></div>
-            <div class="pulser"></div>
-            <div class="pulser"></div>
-            <div class="pulser"></div> -->
-        </label>
-    
+        <div class="logo"></div>
         <h1 id="brand-text">IVY RAINE <br>MUSIC</h1>
         <img id="notes" src="./image/music_notes.png" alt="">
         <div class="gradient-bg">
@@ -89,7 +80,7 @@
             <ul>
                 <li data-aos="zoom-out" data-aos-duration="1500"
                 data-aos-easing="ease-in-out">
-                    <div class="subtitle-container">關於</div>
+                    <div class="subtitle">關於</div>
                     <p>「Ivy」象徵生命力與延展性，如同創作家對音樂的熱情，能靈活攀附不同風格；「Raine」則如雨水滲透萬物，帶來滋養與靈感。
                         <br>
                         <br>Ivy堅持以細緻的客製化服務，為影像、遊戲、品牌注入靈魂，打造獨特的聲音場景。讓作品如雨後初生的藤蔓，鮮活動聽、蔓延心間。
@@ -97,7 +88,7 @@
                 </li>
                 <li data-aos="zoom-out" data-aos-duration="1500"
                 data-aos-easing="ease-in-out">
-                    <div class="subtitle-container">技能</div>
+                    <div class="subtitle">技能</div>
                     <p>多種音樂風格之作曲編曲、影像配樂、音效設計、混音後製、吉他鋼琴演奏。
                         <br>
                         <br>編曲軟體：
@@ -117,7 +108,7 @@
             <div data-aos = "fade-up" data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out">
-                <div class = "title-container">服務項目</div>
+                <div class = "title">服務項目</div>
                 <ul>
                     <li>
                         <p >作曲、編曲、影像配樂、混音後製、音效設計、Podcast剪輯後製、編曲教學、吉他教學。</p>
@@ -132,7 +123,7 @@
             <div data-aos = "fade-up" data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out">
-                <div class = "title-container">作品集</div>
+                <div class = "title">作品集</div>
                 <div class="player">
                     <ul>
                         <li><iframe width="200" height="240" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2037953112&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></li>
@@ -150,7 +141,7 @@
             <div data-aos = "fade-up" data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out">
-                <div class = "title-container">活動集錦</div>
+                <div class = "title">活動集錦</div>
                 <div class="marquee-container" id="marquee">
                     <div class="marquee-track" id="track">
                       <!-- 圖片重複兩組實現無縫滾動 -->
@@ -187,7 +178,7 @@
                 </li>
 
                 <li class = "info-detail">
-                    <div class = "title-container">聯絡資訊</div>
+                    <div class = "title">聯絡資訊</div>
                     <p></p>
                     <p><i class="fa-regular fa-envelope"></i>ivyrainestudio@gmail.com</p>
                     <p><i class="fa-brands fa-line"></i>ivyrainemusic</p>
@@ -210,10 +201,10 @@
                 <path d="M19.5 53.625L39 34.125L58.5 53.625M19.5 21.125H58.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
         </a>
-
-        <!---------- footer ---------->
-        <footer>© 2025 Copyright Ivy Raine Music</footer>
     </div>
+
+    <!---------- footer ---------->
+    <footer>© 2025 Copyright Ivy Raine Music</footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>

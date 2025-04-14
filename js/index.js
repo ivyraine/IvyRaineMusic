@@ -1,25 +1,6 @@
-window.addEventListener("load", () => {
-    // 計算動畫總長度（脈衝最後一個 1.3s 延遲 + 1.2s 動畫 = 約 2.5s）
-    setTimeout(() => {
-        // 隱藏 logo 與 pulser
-        document.querySelector("label").style.display = "none";
 
-        // 顯示文字
-        document.getElementById("brand-text").classList.add("show");
-        document.getElementById("notes").classList.add("show");
-    }); // 給多一點緩衝
-    
-});
 
-//header 漢堡選單
-// $(function(){
-//     $('.bar i').click(function(){
-//         // $(this).addClass('active')
-//         $('.bar').toggleClass('active')
-//         $('.overlay').fadeToggle(300);
-//     })
-// })
-
+// header
 $(function(){
     // 漢堡選單點擊
     $('.bar i').click(function(e){
@@ -64,8 +45,6 @@ $(function(){
     });
 });
 
-
-
 // 照片跑馬燈
     document.addEventListener('DOMContentLoaded', () => {
       const marquee = document.getElementById('marquee');
@@ -85,7 +64,6 @@ $(function(){
     { id: '實際ID2', title: '美好的一天', artist: '陽光樂團', duration: 260 },
     // ...其他歌曲
 ];
-
 
 // 播放功能的簡單示例
 document.addEventListener('DOMContentLoaded', function() {
@@ -129,3 +107,5 @@ tracks.forEach((track, index) => {
     });
 });
 });
+
+

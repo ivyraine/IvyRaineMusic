@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/logo2.png">
-    <link rel="stylesheet" href="css/style_header.css">
-    <link rel="stylesheet" href="css/style_service2.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Service</title>
 </head>
 
-<body>
+<body class = "service_page">
     <div class="top"></div>
     <header>
         <!---------- bar ---------->
-        <div class="bar">
+        <nav class="bar">
             <div class="logo-area">
                 <a href="index.html"><img src="image/logo.png" alt=""></a>
                 <p>Ivy Raine Music</p>
             </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li>
                     <a href="portfolio2.html">Portfolio</a>
                     <ol>
-                        <li><a href="p_comp_arr.html">Composition & Arrangement</a></li>
+                        <li><a href="p_comp_arr.html">Music</a></li>
                         <li><a href="p_filmscore.html">Film Score</a></li>
                         <li><a href="p_sounddesign.html">Sound Design</a></li>
                     </ol>
@@ -36,67 +37,64 @@
                 <li><a href="service2.html">Service</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
+
+    <div class="overlay"></div>
 
     <div class="wrapper">
         
         <!---------- main ---------->
-        <div class="title">
-            <div class = "title-container">服務項目</div>
-        </div>
 
-         <!---------- service ---------->
+        <div class="ser-kc">
+            <div class = "theme">服務項目</div>
+            <!---------- service ---------->
 
-         <div class="content">
-            <div class = "subtitle-container">優惠方案</div>
-        
-            <div class = "item">
-                <a class = "item-container" href="contact.html"><h3>畢業歌曲製作<br>優惠方案</h3></a>
-                
-                <div class ="countdown">
-                    <p>活動剩餘時間</p>
-                    <p class = 'clock'>90天08時27分43秒</p>
-                </div>
-            </div>
-
-         <div class="content">
-            <div class = "subtitle-container">服務項目</div>
-
-            <div class = "item2">
-                <ul>
-                    <li class = "item2-content1">
-                        <a href="contact.html"><span>作曲編曲</span></a>
-                        <!-- <p>test test test test</p> -->
-                    </li>
-                    <li class = "item2-content2">
-                        <a href="contact.html"><span>影像配樂</span></a>
-                        <!-- <p>test test test test</p> -->
-                    </li>
-                </ul>
-                <ul>
-                    <li class = "item2-content3">
-                        <a href="contact.html"><span>音效設計</span></a>
-                        <!-- <p>test test test test</p> -->
-                    </li>
-                    <li class = "item2-content4">
-                        <a href="contact.html"><span>混音剪輯後製</span></a>
-                        <!-- <p>test test test test</p> -->
-                    </li>
-                </ul>
-                <ul>
-                    <li class = "item2-content5">
-                        <a href="contact.html"><span>編曲教學</span></a>
-                        <!-- <p>test test test test</p> -->
-
-                    </li>
-                    <li class = "item2-content6">
-                        <a href="contact.html"><span>吉他教學</span></a>
-                        <!-- <p>test test test test</p> -->
-                    </li>
-                </ul>          
-            </div>
+            <div class="content">
+                <div class = "title">優惠方案</div>
             
+                <div class = "item">
+                    <a class = "item-container" href="contact.html"><h3>畢業歌曲製作<br>優惠方案</h3></a>
+                    
+                    <div class ="countdown">
+                        <p>活動剩餘時間</p>
+                        <p class = 'clock'>90天08時27分43秒</p>
+                    </div>
+                </div>
+            </div>   
+
+            <div class="content2">
+                <div class = "title">服務項目</div>
+
+                <div class = "item2">
+                    <ul>
+                        <li class = "item2-content1">
+                            <a href="contact.html"><span>作曲編曲</span></a>
+                        </li>
+                        <li class = "item2-content2">
+                            <a href="contact.html"><span>影像配樂</span></a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "item2-content3">
+                            <a href="contact.html"><span>音效設計</span></a>
+                        </li>
+                        <li class = "item2-content4">
+                            <a href="contact.html"><span>混音剪輯後製</span></a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "item2-content5">
+                            <a href="contact.html"><span>編曲教學</span></a>
+
+                        </li>
+                        <li class = "item2-content6">
+                            <a href="contact.html"><span>吉他教學</span></a>
+                        </li>
+                    </ul>          
+                </div>
+            
+             </div>
         </div>
 
         <a href="#top" class="btn-top">
@@ -106,9 +104,10 @@
                 </svg>
         </a>
 
-        <!---------- footer ---------->
-        <footer>© 2025 Copyright Ivy Raine Music</footer>
-
     </div>
+
+    <!---------- footer ---------->
+    <footer>© 2025 Copyright Ivy Raine Music</footer>
+    
 </body>
 </html>
