@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/test.css">
+    <title>音樂播放列表</title>
+    <script src = "./js/test.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <header class="header">
+            <div class="logo">音樂雲</div>
+            <div class="nav-links">
+                <a href="#">首頁</a>
+                <a href="#">探索</a>
+                <a href="#">圖書館</a>
+                <a href="#">搜尋</a>
+            </div>
+        </header>
+        
+        <main>
+            <div class="playlist-header">
+                <div class="playlist-cover">
+                    <div style="color: #aaa; font-size: 20px;">封面圖片</div>
+                </div>
+                <div class="playlist-info">
+                    <h1 class="playlist-title">我的最愛音樂合集</h1>
+                    <div class="playlist-creator">由 用戶名稱 創建</div>
+                    <div class="playlist-stats">
+                        <span>12 首歌曲</span>
+                        <span>43 分鐘</span>
+                        <span>1,234 次播放</span>
+                        <span>87 個讚</span>
+                    </div>
+                    <button class="play-button">
+                        <span>播放全部</span>
+                    </button>
+                </div>
+            </div> -->
+            
+            <div class="tracks-container">
+                <!-- 歌曲 1 -->
+                <div class="track" data-track-id="1">
+                    <div class="track-number">1</div>
+                    <div class="track-photo"><img src="./image/songlist1.png" alt=""></div>
+                    <div class="track-info">
+                      <div class="track-title">Kung Fu Beauty</div>
+                  </div>
+                    <div class="track-play">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                
+                <!-- 歌曲 2 -->
+                <div class="track" data-track-id="2">
+                  <div class="track-number">2</div>
+                  <div class="track-photo"><img src="./image/songlist2.png" alt=""></div>
+                  <div class="track-info">
+                    <div class="track-title">Supreme Blessings</div>
+                </div>
+                  <div class="track-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                
+                <!-- 歌曲 3 -->
+                <div class="track" data-track-id="3">
+                  <div class="track-number">3</div>
+                  <div class="track-photo"><img src="./image/songlist3.png" alt=""></div>
+                  <div class="track-info">
+                    <div class="track-title">Fortune Cookie</div>
+                </div>
+                  <div class="track-play">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+    
+    <div class="audio-player">
+      <div class="player-info">
+        <div class="player-thumbnail">
+          <img src="./image/songlist1.png" alt="">
+        </div>
+        <div>
+            <div class="player-track-title">Kung Fu Beauty</div>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="player-time">
+            <span>1:30</span>
+            <span>3:45</span>
+        </div>
+      </div>
+        <div class="player-controls">
+            <div class="player-backward">⏮</div>
+            <div class="player-control primary">
+                <div class="play-icon"></div>
+            </div>
+            <div class="player-forward">⏭</div>
+            <div class="player-volume">🔊</div>
+        </div> 
+
+    </div>
+
+    <!-- <script>
+        // 播放功能的簡單示例
+        document.addEventListener('DOMContentLoaded', function() {
+            const tracks = document.querySelectorAll('.track');
+            const playButton = document.querySelector('.play-button');
+            const playerPlayButton = document.querySelector('.player-control.primary');
+            let isPlaying = false;
+            
+            // 更新播放按鈕圖標
+            function updatePlayButton(playing) {
+                isPlaying = playing;
+                if (isPlaying) {
+                    playerPlayButton.innerHTML = '<div class="pause-icon"></div>';
+                } else {
+                    playerPlayButton.innerHTML = '<div class="play-icon"></div>';
+                }
+            }
+            
+            // 點擊主播放按鈕
+            playButton.addEventListener('click', function() {
+                updatePlayButton(!isPlaying);
+            });
+            
+            // 點擊播放器控制按鈕
+            playerPlayButton.addEventListener('click', function() {
+                updatePlayButton(!isPlaying);
+            });
+            
+            // 點擊單曲
+            tracks.forEach((track, index) => {
+                const trackPlay = track.querySelector('.track-play');
+                trackPlay.addEventListener('click', function() {
+                    // 更新播放狀態
+                    updatePlayButton(true);
+                    
+                    // 更新播放器信息
+                    const title = track.querySelector('.track-title').textContent;
+                    const artist = track.querySelector('.track-artist').textContent;
+                    document.querySelector('.player-track-title').textContent = title;
+                    document.querySelector('.player-track-artist').textContent = artist;
+                });
+            });
+        });
+    </script> -->
+
+<script src="https://w.soundcloud.com/player/api.js"></script>
+</body>
+</html>

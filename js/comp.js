@@ -151,7 +151,6 @@ $(document).ready(function () {
         // 創建標籤元素
         const $tag = $('<div class="search-tag"></div>');
         $tag.html(`
-            <span class="tag-category">${category}:</span>
             <span class="tag-text">${text}</span>
             <span class="tag-remove" data-category="${category}" data-value="${value}">×</span>
         `);
@@ -190,8 +189,8 @@ $(document).ready(function () {
         displayResults(filteredMusic);
 
         // ✅ 清空搜尋欄
-        selectedTags = [];
-        $('#searchTags').empty();
+        // selectedTags = [];
+        // $('#searchTags').empty();
     });
     
     displayResults(musicData);

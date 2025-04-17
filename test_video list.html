@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>影片點播（可滑動）</title>
+    <style>
+        .video-player {
+            width: 650px;
+            height: 366px;
+            margin: 10px auto;
+            background-color: #000;
+        }
+
+        .thumbnails-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .arrow {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            user-select: none;
+        }
+
+        .thumbnails {
+            width: 500px;
+            overflow: hidden;
+        }
+
+        .thumb-track {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .thumb {
+            width: 120px;
+            height: 68px;
+            margin: 5px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .thumb {
+                width: 90px;
+                height: 50px;
+                margin: 4px;
+            }
+
+            .arrow {
+                font-size: 20px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thumb {
+                width: 70px;
+                height: 40px;
+                margin: 3px;
+            }
+
+            .arrow {
+                font-size: 18px;
+                padding: 6px;
+            }
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        $(function(){
+            const $track = $('.thumb-track');
+            const $thumbnails = $('.thumbnails');
+            let scrollPosition = 0;
+            const scrollAmount = 130; // 每次移動的像素數
+
+            $('.thumb').click(function(){
+                let videoSrc = $(this).data('video');
+                $('#mainVideo').attr('src', videoSrc);
+            });
+
+            $('.arrow-left').click(function(){
+                scrollPosition = Math.min(scrollPosition + scrollAmount, 0);
+                $track.css('transform', `translateX(${scrollPosition}px)`);
+            });
+
+            $('.arrow-right').click(function(){
+                const trackWidth = $track.get(0).scrollWidth;
+                const containerWidth = $thumbnails.width();
+                const maxScroll = containerWidth - trackWidth;
+                scrollPosition = Math.max(scrollPosition - scrollAmount, maxScroll);
+                $track.css('transform', `translateX(${scrollPosition}px)`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- 影片播放區 -->
+        <div class="video-player">
+            <iframe id="mainVideo" width="650" height="366" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- 可滑動縮圖區 -->
+        <div class="thumbnails-wrapper">
+            <div class="arrow arrow-left">&#9664;</div>
+            <div class="thumbnails">
+                <div class="thumb-track">
+                    <img class="thumb" src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                    <img class="thumb" src="https://img.youtube.com/vi/3JZ_D3ELwOQ/0.jpg" data-video="https://www.youtube.com/embed/3JZ_D3ELwOQ">
+                    <img class="thumb" src="https://img.youtube.com/vi/kXYiU_JCYtU/0.jpg" data-video="https://www.youtube.com/embed/kXYiU_JCYtU">
+                    <img class="thumb" src="https://img.youtube.com/vi/eVTXPUF4Oz4/0.jpg" data-video="https://www.youtube.com/embed/eVTXPUF4Oz4">
+                    <img class="thumb" src="https://img.youtube.com/vi/fLexgOxsZu0/0.jpg" data-video="https://www.youtube.com/embed/fLexgOxsZu0">
+                    <img class="thumb" src="https://img.youtube.com/vi/YQHsXMglC9A/0.jpg" data-video="https://www.youtube.com/embed/YQHsXMglC9A">
+                </div>
+            </div>
+            <div class="arrow arrow-right">&#9654;</div>
+        </div>
+    </div>
+</body>
+</html>

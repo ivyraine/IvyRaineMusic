@@ -27,7 +27,7 @@ body.act_page {
 
 body.service_page {
   background-image: url(../image/service_bg.jpg);
-  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -48,7 +48,7 @@ body.contact_page {
 /* ---------- component ----------*/
 .theme {
   font-size: 96px;
-  height: 116px;
+  height: 110px;
   text-align-last: justify;
   letter-spacing: 0px;
 
@@ -61,7 +61,7 @@ body.contact_page {
   font-size: 32px;
   letter-spacing: 0px;
   height: 40px;
-  margin: 30px 0 10px;
+  margin: 30px 40px 10px;
   text-align-last: justify;
   max-width: 160px;
   border-bottom: 4px solid #77FFF3;
@@ -105,7 +105,47 @@ body.contact_page {
   justify-content: right;
 }
 
+/* ---------- back to the top ----------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-top svg {
+  width: 40px;
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+
+  z-index: 800;
+}
+
+.btn-top svg:hover path {
+  stroke: #77FFF3;
+}
+
+.btn-top svg:hover rect {
+  fill-opacity: 1;
+}
+
 /* ---------- header ----------*/
+.front_page header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(1, 37, 91, 1) 40%, rgba(1, 37, 91, 0));
+  padding-bottom: 5px;
+
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 2s;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -114,6 +154,7 @@ header {
   z-index: 1000;
   background: linear-gradient(to bottom, rgba(1, 37, 91, 1) 40%, rgba(1, 37, 91, 0));
   padding-bottom: 5px;
+
 }
 
 .bar {
@@ -231,32 +272,6 @@ footer {
   text-align: center;
   height: 40px;
   line-height: 40px;
-}
-
-/* ---------- back to the top ----------*/
-
-html {
-  scroll-behavior: smooth;
-}
-
-.btn-top svg {
-  width: 40px;
-}
-
-.btn-top {
-  position: fixed;
-  bottom: 30px;
-  right: 60px;
-
-  z-index: 800;
-}
-
-.btn-top svg:hover path {
-  stroke: #77FFF3;
-}
-
-.btn-top svg:hover rect {
-  fill-opacity: 1;
 }
 
 /* ---------- front page animation_logo ----------*/
@@ -606,6 +621,7 @@ section {
 }
 
 .content p {
+  text-decoration: none;
   font-size: 20px;
   line-height: 1.5;
   width: 640px;
@@ -617,7 +633,7 @@ section {
 .more1 {
   color: white;
   width: 640px;
-  margin: 40px 40px;
+  margin: 40px 40px 0;
   display: flex;
   justify-content: right;
 }
@@ -627,7 +643,7 @@ section {
   width: 30%;
   position: absolute;
   right: 40px;
-  bottom: 30px;
+  bottom: -20px;
 }
 
 /* ---------- other content_portfolio ----------*/
@@ -718,11 +734,6 @@ section {
 }
 
 /* ---------- other content_contact ----------*/
-.contact {
-  /* outline: auto; */
-  /* margin: 20px auto; */
-  padding: 0 0 50px;
-}
 
 .contact ul {
   display: flex;
@@ -743,8 +754,12 @@ section {
   flex-direction: column;
 }
 
+.info-detail .title{
+  margin: 30px 0px 10px;
+}
+
 .info-detail:first-child {
-  align-self: center;
+  /* align-self: center; */
   /* 讓第一個子元素（圖片容器）垂直居中 */
 }
 
@@ -820,7 +835,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 60px;
-  row-gap: 0px;
+  row-gap: 20px;
 }
 
 .grid .photo {
@@ -833,8 +848,27 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
+.grid .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(
+      ellipse 60% 60% at 50% 50%,
+      black 0%,
+      black 30%,
+      rgba(0, 0, 0, 0.5) 60%,
+      transparent 85%
+  );
+  mask-image: radial-gradient(
+      ellipse 60% 60% at 50% 50%,
+      black 0%,
+      black 30%,
+      rgba(0, 0, 0, 0.5) 60%,
+      transparent 85%
+  );
+        }
 
 .text-top-right {
   grid-column: 2 / 3;
@@ -857,16 +891,13 @@ section {
   border-radius: 5px;
 }
 
-.grid .photo img {
-  max-width: 100%;
-  outline: 20px solid rgba(255, 255, 255, 0.4);
-
-  height: auto;
-  display: block;
-}
-
 .text-top-right .theme {
   max-width: 240px;
+}
+
+.about-container .title{
+  margin: 10px 0px 10px;
+
 }
 
 .grid .p {
@@ -953,17 +984,9 @@ section {
 }
 
 /* ---------- comp and arr ----------*/
-.tutorial {
-  padding: 0 160px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .search-area {
-  margin: 60px 0 20px;
-  padding: 0 160px;
+  margin: 60px auto 20px;
+  width: 80%;
   display: flex;
   align-items: center; 
   gap: 4px;  
@@ -1007,13 +1030,24 @@ section {
   color: white;
 }
 
+.tutorial {
+  margin: 0px auto 20px;
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.4);
+  text-shadow: initial;
+}
+
 .tag-text {
   margin-right: 5px;
 }
 
 .category-tabs {
   display: flex;
-  padding: 0 160px;
+  margin: 0px auto;
+  width: 82%;
   gap: 15px;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -1038,6 +1072,16 @@ section {
   margin-bottom: 20px;
 }
 
+.tabs-group {
+  display: none;
+  margin: 0px auto;
+  width: 80%;
+}
+
+.tabs-group.active {
+  display: block;
+}
+
 .content-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -1060,17 +1104,6 @@ section {
   border: 1px solid #77FFF3;
 }
 
-.tabs-group {
-  display: none;
-  padding: 0 160px;
-
-}
-
-.tabs-group.active {
-  display: block;
-}
-
-
 .tag-category {
   font-size: 12px;
   opacity: 0.8;
@@ -1079,22 +1112,19 @@ section {
 
 .tag-remove {
   cursor: pointer;
-  font-weight: bold;
   width: 16px;
   height: 16px;
   text-align: center;
   line-height: 16px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .tag-remove:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
 }
 
 .results-section {
-  margin-top: 0 auto;
-  padding: 20px 160px 0;
+  margin: 40px auto;
+  width: 80%;
 }
 
 
@@ -1189,10 +1219,11 @@ video{
 }
 
 .act-kc .theme {
-  max-width: 500px;
   position: absolute;
-  top: 65vh;
-  right: 8vw;
+  bottom: 20vh;
+  right: 16vh;
+  max-width: 500px;
+  text-align: right;
 }
 
 /* ---------- album ----------*/
@@ -1381,7 +1412,7 @@ video{
   right: 0;
 }
 
-.countdown p {
+.countdown .time-remain{
   max-width: 230px;
   font-size: 16px;
   letter-spacing: 3px;
@@ -1392,7 +1423,6 @@ video{
 
 .countdown .clock {
   max-width: 230px;
-
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.6;
@@ -1400,7 +1430,7 @@ video{
   margin: 0;
 }
 
-/* ---------- service ----------*/
+/* ---------- service info ----------*/
 
 .item2 {
   background-color: rgba(255, 255, 255, 0.3);
@@ -1558,6 +1588,8 @@ ol {
   background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 4px;
+  padding:0 8px;
+  color: white;
 }
 
 .form textarea {
@@ -1566,6 +1598,8 @@ ol {
   background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 4px;
+  padding: 4px 8px;
+  color: white;
 }
 
 .form .send {
