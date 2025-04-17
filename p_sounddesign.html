@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/logo2.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sound Design</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src = "js/script.js"></script>
 </head>
 
 <body class = "sound_page">
@@ -45,32 +47,35 @@
         <!---------- title ---------->
         <div class = "title2">音效設計</div>
 
-        <iframe class = "video" width="840" height="472" src="https://www.youtube.com/embed/0NxRoB6_TiM?si=LeF03xf90mHCSmhR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        <div class="preview">
-            <a href="#" class="left"><i class="fa-solid fa-circle-chevron-left"></i></a>
-            <ul>
-                <li><img src="./image/porfolio pic/A9 vr.png" alt=""></li>
-                <li><img src="./image/porfolio pic/iTicket.png" alt=""></li>
-                <li><img src="./image/porfolio pic/momo dance.png" alt=""></li>
-                <li><img src="./image/porfolio pic/vr motor.png" alt=""></li>
-                <li><img src="./image/porfolio pic/diamond.png" alt=""></li>
-                <li><img src="./image/porfolio pic/dino.png" alt=""></li>
-            </ul>
-            <a href="#" class="right"><i class="fa-solid fa-circle-chevron-right"></i></a>
+        <div class="video-player">
+            <iframe id="mainVideo" width="780" height="440" src="https://www.youtube.com/embed/uv3UxHN1UGU?si=CkQBeH-PlfUNqW_B" frameborder="0" allowfullscreen></iframe>
         </div>
 
+        <div class="thumbnails-wrapper">
+            <div class="arrow arrow-left">&#9664;</div>            
+            <div class = "thumbnails">
+                <div class="thumb-track">
+                    <img class = "thumb active" src="http://img.youtube.com/vi/uv3UxHN1UGU/0.jpg" data-video="https://www.youtube.com/embed/uv3UxHN1UGU?si=CkQBeH-PlfUNqW_B">
+                    <img class = "thumb" src="http://img.youtube.com/vi/jAbQNPdmTrM/0.jpg" data-video="https://www.youtube.com/embed/jAbQNPdmTrM?si=3hY6yS8EqLWDJUrK">
+                    <img class = "thumb" src="http://img.youtube.com/vi/Lvd4qR2gi30/0.jpg" data-video="https://www.youtube.com/embed/Lvd4qR2gi30?si=mDMaqqAD7SJrDMaq">
+                    <img class = "thumb" src="http://img.youtube.com/vi/k4PtDiF9Bko/0.jpg" data-video="https://www.youtube.com/embed/k4PtDiF9Bko?si=SUPu5aZdGvTCjhCJ">
+                    <img class = "thumb" src="http://img.youtube.com/vi/nNixBdNzHng/0.jpg" data-video="https://www.youtube.com/embed/nNixBdNzHng?si=Q6gYZRKLB0yoxkjE">
+                    <img class = "thumb" src="http://img.youtube.com/vi/Lvd4qR2gi30/0.jpg" data-video="https://www.youtube.com/embed/Lvd4qR2gi30?si=w709TcTBRas-koIJ">
+
+                </div>
+            </div>
+            <div class="arrow arrow-right">&#9654;</div>
+        </div>
+        
         <a href="#top" class="btn-top">
             <svg xmlns="http://www.w3.org/2000/svg" width="78" height="78" viewBox="0 0 78 78" fill="none">
                 <rect width="78" height="78" rx="39" fill="white" fill-opacity="0.3"/>
                 <path d="M19.5 53.625L39 34.125L58.5 53.625M19.5 21.125H58.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
         </a>
-        
-        <!---------- footer ---------->
-        <footer>© 2025 Copyright Ivy Raine Music</footer>
 
     </div>
-    
+    <!---------- footer ---------->
+    <footer>© 2025 Copyright Ivy Raine Music</footer>
 </body>
 </html>

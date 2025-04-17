@@ -108,4 +108,35 @@ tracks.forEach((track, index) => {
 });
 });
 
+//影片輪播
+$(function(){
+    const $track = $('.thumb-track');
+    const $thumbnails = $('.thumbnails');
+    let scrollPosition = 0;
+    const scrollAmount = 130; // 每次移動的像素數
 
+    $('.thumb').click(function(){
+        let $this = $(this);
+        let videoSrc = $this.data('video');
+    
+        // 設定影片來源
+        $('#mainVideo').attr('src', videoSrc);
+    
+        // 移除其他縮圖的 active 狀態，加到目前這張縮圖
+        $('.thumb').removeClass('active');
+        $this.addClass('active');
+    });
+
+    $('.arrow-left').click(function(){
+        scrollPosition = Math.min(scrollPosition + scrollAmount, 0);
+        $track.css('transform', `translateX(${scrollPosition}px)`);
+    });
+
+    $('.arrow-right').click(function(){
+        const trackWidth = $track.get(0).scrollWidth;
+        const containerWidth = $thumbnails.width();
+        const maxScroll = containerWidth - trackWidth;
+        scrollPosition = Math.max(scrollPosition - scrollAmount, maxScroll);
+        $track.css('transform', `translateX(${scrollPosition}px)`);
+    });
+});

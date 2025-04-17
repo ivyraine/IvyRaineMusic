@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/logo2.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Film Score</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src = "js/script.js"></script>
+
 </head>
 
 <body class = "film_page">
@@ -43,21 +46,26 @@
 
     <div class="wrapper">
         <!---------- title ---------->
-        <div class = "title2">影像配樂</div>
+        <div class = "title2">多媒體配樂</div>
+       
+        <div class="video-player">
+            <iframe id="mainVideo" width="780" height="440" src="https://www.youtube.com/embed/uv3UxHN1UGU?si=CkQBeH-PlfUNqW_B" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-        <iframe class = "video" width="840" height="472" src="https://www.youtube.com/embed/uv3UxHN1UGU?si=Iyl7sAqmUB5CTfWf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="thumbnails-wrapper">
+            <div class="arrow arrow-left">&#9664;</div>            
+            <div class = "thumbnails">
+                <div class="thumb-track">
+                    <img class = "thumb active" src="http://img.youtube.com/vi/uv3UxHN1UGU/0.jpg" data-video="https://www.youtube.com/embed/uv3UxHN1UGU?si=CkQBeH-PlfUNqW_B">
+                    <img class = "thumb" src="http://img.youtube.com/vi/jAbQNPdmTrM/0.jpg" data-video="https://www.youtube.com/embed/jAbQNPdmTrM?si=3hY6yS8EqLWDJUrK">
+                    <img class = "thumb" src="http://img.youtube.com/vi/Lvd4qR2gi30/0.jpg" data-video="https://www.youtube.com/embed/Lvd4qR2gi30?si=mDMaqqAD7SJrDMaq">
+                    <img class = "thumb" src="http://img.youtube.com/vi/k4PtDiF9Bko/0.jpg" data-video="https://www.youtube.com/embed/k4PtDiF9Bko?si=SUPu5aZdGvTCjhCJ">
+                    <img class = "thumb" src="http://img.youtube.com/vi/nNixBdNzHng/0.jpg" data-video="https://www.youtube.com/embed/nNixBdNzHng?si=Q6gYZRKLB0yoxkjE">
+                    <img class = "thumb" src="http://img.youtube.com/vi/Lvd4qR2gi30/0.jpg" data-video="https://www.youtube.com/embed/Lvd4qR2gi30?si=w709TcTBRas-koIJ">
 
-        <div class="preview">
-            <a href="#" class="left"><i class="fa-solid fa-circle-chevron-left"></i></a>
-            <ul>
-                <li><img src="./image/porfolio pic/sailor.png" alt=""></li>
-                <li><img src="./image/porfolio pic/archery.png" alt=""></li>
-                <li><img src="./image/porfolio pic/vr motor.png" alt=""></li>
-                <li><img src="./image/porfolio pic/iTicket.png" alt=""></li>
-                <li><img src="./image/porfolio pic/DanzBase.jpg" alt=""></li>
-                <li><img src="./image/porfolio pic/WonderShow.png" alt=""></li>
-            </ul>
-            <a href="#" class="right"><i class="fa-solid fa-circle-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="arrow arrow-right">&#9654;</div>
         </div>
 
         <a href="#top" class="btn-top">
@@ -66,12 +74,9 @@
                 <path d="M19.5 53.625L39 34.125L58.5 53.625M19.5 21.125H58.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
         </a>
-        
-
-        <!---------- footer ---------->
-        <footer>© 2025 Copyright Ivy Raine Music</footer>
 
     </div>
-    
+    <!---------- footer ---------->
+    <footer>© 2025 Copyright Ivy Raine Music</footer>
 </body>
 </html>
