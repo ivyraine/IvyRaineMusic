@@ -152,7 +152,7 @@ $(document).ready(function () {
         const $tag = $('<div class="search-tag"></div>');
         $tag.html(`
             <span class="tag-text">${text}</span>
-            <span class="tag-remove" data-category="${category}" data-value="${value}">×</span>
+            <span class="tag-remove" data-category="${category}" data-value="${value}">x</span>
         `);
 
         // 添加到搜尋區
@@ -199,7 +199,7 @@ $(document).ready(function () {
     function getSoundCloudEmbedUrl(url) {
         // 從 URL 獲取 track ID，這是一個示例方法，您可能需要根據實際 SoundCloud URL 格式調整
         const cleanUrl = url.split('?')[0];
-        return `https://w.soundcloud.com/player/?url=${encodeURIComponent(cleanUrl)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`;
+        return `https://w.soundcloud.com/player/?url=${encodeURIComponent(cleanUrl)}&color=%23000000&theme=dark&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
     }
 
     // 顯示搜尋結果
