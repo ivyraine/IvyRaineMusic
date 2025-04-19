@@ -557,6 +557,31 @@
         width: 90%;
     }
 }
+
+/*      comp and arr page      */
+@media screen and (max-width: 1000px) {
+    .result-item {
+      width: calc(33.33% - 14px);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .result-item {
+      width: calc(50% - 10px);
+    }
+    
+    #resultsList {
+      gap: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .result-item {
+        width: calc(100% - 10px);
+        aspect-ratio: 5/2;
+      }
+  }
+
 /*      film score / sound page      */
 @media screen and (max-width:1000px) {
     #mainVideo {
@@ -598,7 +623,7 @@
 
     .album-tabs {
         font-size: 20px;
-        height: 70px;
+        height: 50px;
         line-height: 50px;
     }
 
@@ -615,7 +640,7 @@
 
     .album-tabs {
         font-size: 18px;
-        height: 60px;
+        height: 40px;
         line-height: 40px;
     }
 
@@ -644,7 +669,7 @@
 
     .album-tabs {
         font-size: 18px;
-        height: 50px;
+        height: 30px;
         line-height: 30px;
     }
 
@@ -662,7 +687,7 @@
 
     .album-tabs {
         font-size: 16px;
-        height: 40px;
+        height: 20px;
         line-height: 20px;
     }
 

@@ -5,110 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/logo2.png">
-    <link rel="stylesheet" href="/css/lightbox.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Activities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Composition and Arrangement</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
     <script src = "js/script.js"></script>
-    <script src = 'js/activities.js'></script>
-
+    <script src="./js/comp_test.js"></script>
 </head>
 
-<body  class = "act_page">
-    <div class="top"></div>
-    <header>
-        <!---------- bar ---------->
-        <div class="bar">
-            <div class="logo-area">
-                <a href="index.html"><img src="image/logo.png" alt=""></a>
-                <p>Ivy Raine Music</p>
-            </div>
-            <i class="fa fa-bars" aria-hidden="true"></i>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="has-submenu">
-                    <a href="portfolio2.html">Portfolio</a>
-                    <ol>
-                        <li><a href="p_comp_arr.html">Music</a></li>
-                        <li><a href="p_filmscore.html">Film Score</a></li>
-                        <li><a href="p_sounddesign.html">Sound Design</a></li>
-                    </ol>
-                </li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="service2.html">Service</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-    
-    <div class="overlay"></div>
+<body class = "comp_page">
 
     <div class="wrapper">
+        <!---------- title ---------->
+        <div class="title2">作曲/編曲</div>
 
-        <!---------- main ---------->
-        <div class="act-kc">
-            <div class = "theme">活動集錦 </div>
-            <div class="album-container">
-                <div class="album-tabs">
-                    <div class="album-tab active" data-tab="band">
-                        <span>樂團表演</span>
-                    </div>
-                    <div class="album-tab" data-tab="camp">
-                        <span>編曲營隊</span>
-                    </div>
-                    <div class="album-tab" data-tab="workshop">
-                        <span>研習營</span>
-                    </div>
-                </div>
-        
-                <div id="band" class="album-grid active-tab">
-                    <div class="album-grid-item">
-                        <a  class="photo-link" href="./image/photo_1.jpg" data-lightbox="band-set" data-title="1234567.">
-                            <img src="./image/photo_1.jpg" alt="貼文1">
-                        </a>
-                    </div>
-                    <div class="album-grid-item">
-                        <a class="photo-link" href="./image/photo_2.jpeg" data-lightbox="band-set" data-title="45678">
-                            <img src="./image/photo_2.jpeg" alt="貼文2">
-                        </a>
-                    </div>
-                    <div class="album-grid-item"><img src="./image/photo_3.jpg" alt="貼文3"></div>
-                    <div class="album-grid-item"><img src="./image/photo_4.jpg" alt="貼文4"></div>
-                    <div class="album-grid-item"><img src="./image/photo_5.jpg" alt="貼文5"></div>
-                    <div class="album-grid-item"><img src="./image/photo_6.png" alt="貼文6"></div>
-                    <div class="album-grid-item"><img src="./image/photo_7.jpg" alt="貼文7"></div>
-                    <div class="album-grid-item"><img src="./image/photo_8.png" alt="貼文8"></div>
-                    <div class="album-grid-item"><img src="./image/photo_9.jpg" alt="貼文9"></div>
-                </div>
-        
-                <div id="camp" class="album-grid">
-                    <div class="album-grid-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./image/photo_4.jpg"><img src="./image/photo_4.jpg" alt="貼文4"></div>
-                    <div class="album-grid-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./image/photo_5.jpg"><img src="./image/photo_5.jpg" alt="貼文5"></div>
-                    <div class="album-grid-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./image/photo_6.png"><img src="./image/photo_6.png" alt="貼文6"></div>
-                </div>
-        
-                <div id="workshop" class="album-grid">
-                    <div class="album-grid-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./image/photo_7.jpg"><img src="./image/photo_7.jpg" alt="貼文7"></div>
-                    <div class="album-grid-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./image/photo_8.png"><img src="./image/photo_8.png" alt="貼文8"></div>
-                    <div class="album-grid-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./image/photo_9.jpg"><img src="./image/photo_9.jpg" alt="貼文9"></div>
-                </div>
+        <!-- 搜尋區域 -->
+        <div class="search-area">
+            <div class="search-tags" id="searchTags">
+                <!-- 標籤將在這裡動態添加 -->
+            </div>
+            <button class="search-button" id="searchButton">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <p class="tutorial">點選您想要的樂器、曲風、心情標籤，快速搜尋並試聽符合您需求的歌曲</p>
+
+        <!---------- list ---------->
+
+        <!-- 主類別標籤 -->
+        <div class="category-tabs">
+            <div class="category-tab" data-category="inst">
+                <span>Instrument</span>
+                <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="category-tab active" data-category="genre">
+                <span>Genre</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="category-tab" data-category="mood">
+                <span>Mood</span>
+                <i class="fa-solid fa-chevron-up"></i>
             </div>
         </div>
-        
+
+        <!-- Instrument 標籤組 -->
+        <div class="tabs-group" id="inst-tabs-group">
+            <div class="content-tabs">
+                <div class="content-tab" data-category="inst" data-value="guitar">Guitar</div>
+                <div class="content-tab" data-category="inst" data-value="strings">Strings</div>
+                <div class="content-tab" data-category="inst" data-value="brass">Brass</div>
+ 
+            </div>
+        </div>
+
+        <!-- Genre 標籤組 -->
+        <div class="tabs-group active" id="genre-tabs-group">
+            <div class="content-tabs">
+                <div class="content-tab" data-category="genre" data-value="Orchestral">Orchestral</div>
+                <div class="content-tab" data-category="genre" data-value="Cinematic">Cinematic</div>
+                <div class="content-tab" data-category="genre" data-value="Hiphop">Hiphop</div>
+
+    
+            </div>
+        </div>
+
+        <!-- Mood 標籤組 -->
+        <div class="tabs-group" id="mood-tabs-group">
+            <div class="content-tabs">
+                <div class="content-tab" data-category="mood" data-value="happy">Happy</div>
+                <div class="content-tab" data-category="mood" data-value="nervous">Nervous</div>
+                <div class="content-tab" data-category="mood" data-value="sad">Sad</div>
+
+            </div>
+        </div>
+
+        <!-- 結果區域 -->
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-count" id="resultsCount"></div>
+            <div id="resultsList"></div>
+        </div>
+    </div>
+
         <a href="#top" class="btn-top">
             <svg xmlns="http://www.w3.org/2000/svg" width="78" height="78" viewBox="0 0 78 78" fill="none">
-                <rect width="78" height="78" rx="39" fill="white" fill-opacity="0.3"/>
-                <path d="M19.5 53.625L39 34.125L58.5 53.625M19.5 21.125H58.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <rect width="78" height="78" rx="39" fill="white" fill-opacity="0.3" />
+                <path d="M19.5 53.625L39 34.125L58.5 53.625M19.5 21.125H58.5" stroke="white" stroke-width="4"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
         </a>
     </div>
 
     <!---------- footer ---------->
-    <footer>© 2025 Copyright Ivy Raine Music</div>
+    <footer>© 2025 Copyright Ivy Raine Music</footer>
 
-    <script src="/js/lightbox.js"></script>
 </body>
+
 </html>

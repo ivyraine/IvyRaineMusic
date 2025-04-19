@@ -36,14 +36,22 @@ body.contact_page {
   background-image: url(../image/contact_bg.jpg);
   background-position: center;
   background-attachment: fixed;
-  ;
-
 }
 
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 50px;
+}
+
+body.comp_page, body.film_page, body.sound_page, body.act_page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper2 {
+  flex: 1;
 }
 
 /* ---------- component ----------*/
@@ -122,14 +130,6 @@ html {
   right: 60px;
 
   z-index: 800;
-}
-
-.btn-top svg:hover path {
-  stroke: #77FFF3;
-}
-
-.btn-top svg:hover rect {
-  fill-opacity: 1;
 }
 
 /* ---------- header ----------*/
@@ -641,7 +641,7 @@ section {
 }
 
 /* ---------- other content_portfolio ----------*/
-.player-container {
+.port-container {
   position: relative;
   max-width: 100%;
   overflow: hidden;
@@ -663,12 +663,12 @@ section {
   margin: 0;
   list-style: none;
   transition: transform 0.3s ease;
-  cursor: grab;
+  /* cursor: grab; */
 }
 
-.player ul:active {
+/* .player ul:active {
   cursor: grabbing;
-}
+} */
 
 .player li {
   width: 200px;
@@ -1059,7 +1059,6 @@ section {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
 }
 
 .search-button i {
@@ -1163,20 +1162,32 @@ section {
 .results-section {
   margin: 40px auto;
   width: 80%;
+  max-width: 960px;
+}
+
+#resultsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
 }
 
 .result-item {
-  padding: 15px;
-  /* border: 1px solid #77FFF3; */
+  width: calc(25% - 15px);
+  aspect-ratio: 5/6;
+  padding: 12px;
   border-radius: 8px;
-  margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .no-results {
   text-align: center;
   padding: 30px;
   color: white;
+  width: 100%;
 }
 
 .results-count {
@@ -1185,12 +1196,27 @@ section {
 
 .player-container {
   width: 100%;
-  margin-top: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .player-container iframe {
   width: 100%;
+  height: 100%;
   border: none;
+}
+
+.player-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #77FFF3;
+  z-index: 10;
 }
 
 /* ---------- film Score ----------*/
@@ -1260,6 +1286,12 @@ section {
   text-align: right;
 }
 
+.lightbox {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  position: fixed !important;
+}
+
 /* ---------- album ----------*/
 .album-container {
   margin: 0 auto 40px;
@@ -1273,7 +1305,7 @@ section {
   font-size: 24px;
   text-decoration: none;
   color: white;
-  height: 80px;
+  height: 60px;
   line-height: 60px;
   justify-content: space-around;
   border-bottom: 1px solid #77FFF3;
@@ -1330,41 +1362,6 @@ section {
   transform: scale(1.1);
 }
 
-/* ---------- Modal 樣式 ----------*/
-.modal-content {
-  background-color: rgba(30, 30, 30, 0.9);
-  border: 1px solid #77FFF3;
-
-}
-
-.modal-header {
-  border-bottom: 1px solid #77FFF3;
-} 
-
-.modal-title {
-  color: #77FFF3;
-  text-shadow: none;
-}
-
-.btn-close {
-  background-color: #77FFF3;
-  opacity: 0.8;
-}
-
-.btn-close:hover {
-  opacity: 1;
-}
-
-#modalImage {
-  max-height: 80vh;
-  width: auto;
-}
-
-.modal-backdrop {
-  opacity: 0.8 !important;
-}
-
-
 /* ---------- service page ----------*/
 .ser-kc {
   position: static;
@@ -1379,10 +1376,9 @@ section {
   max-width: 500px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left:50%;
   transform: translate(-50%, -50%);
-  /* text-align: center; */
-
+  text-align: center;
 }
 
 .ser-kc .title {
@@ -1608,7 +1604,7 @@ section {
 }
 
 ol {
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .form p {
@@ -1618,7 +1614,7 @@ ol {
 
 .form input {
   width: 95%;
-  height: 32px;
+  height: 28px;
   background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 4px;
@@ -1628,7 +1624,7 @@ ol {
 
 .form textarea {
   width: 95%;
-  height: 160px;
+  height: 120px;
   background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 4px;
@@ -1647,3 +1643,31 @@ ol {
   border: 0;
   margin: 0 auto;
 }
+
+.form-group2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 20px;
+  gap:4px;
+}
+
+.form-group2 p {
+  flex: 1 0 100%;
+}
+
+.form-group2 label {
+  display: flex;
+  align-items: center;
+}
+
+.form-group2 input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.form-group2 input,
+.form-group2 span {
+  flex: 0 0 auto;
+}
+

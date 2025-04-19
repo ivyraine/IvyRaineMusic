@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Porfolio</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src = "js/script.js"></script>
 </head>
 
@@ -47,10 +50,10 @@
     <!---------- main ---------->
     <div class="wrapper">
     
-        <div class="port-kc">
+        <div class="port-kc" data-aos = "fade-in" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
             <div class = "theme">作品集</div>
 
-            <ul class = "type">
+            <ul class = "type" data-aos = "fade-in" data-aos-delay="500" data-aos-duration="1500" data-aos-easing="ease-in-out">
                 <li><a href="p_comp_arr.html">作曲編曲</a></li>
                 <li><a href="p_filmscore.html">影像配樂</a></li>
                 <li><a href="p_sounddesign.html">音效設計</a></li>
@@ -58,12 +61,12 @@
         </div>
 
         <!---------- content ---------->
-        <div class="portfolio">
+        <div class="portfolio" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
             <div id="comp">
                 <div class = "title">作曲編曲</div>
             </div>
 
-            <div class="player-container">
+            <div class="port-container" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
                 <div class="player">
                     <button class="nav-btn prev-btn">&#9664;</button>             
                     <button class="nav-btn next-btn">&#9654;</button>
@@ -78,24 +81,33 @@
                 </div>
             </div>
 
-            <a class="more" href="p_comp_arr.html">Listen more >></a>
+            <a class="more" href="p_comp_arr.html" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                Listen more >>
+            </a>
        
-            <div id="filmscore">
+            <div id="filmscore" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
             <div class = "title">影像配樂</div>
             </div>
             
-            <iframe class="video" width="960" height="472" src="https://www.youtube.com/embed/uv3UxHN1UGU?si=Iyl7sAqmUB5CTfWf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a class="more" href="p_filmscore.html">Explore more >></a>
-            <div id="sound">
+            <iframe class="video" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out"
+                width="960" height="472" src="https://www.youtube.com/embed/uv3UxHN1UGU?si=Iyl7sAqmUB5CTfWf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <a class="more" href="p_filmscore.html"
+                data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                Explore more >>
+            </a>
+
+            <div id="sound" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
                 <div class = "title">音效設計</div>
             </div>
-
-            <ul>
+            <ul data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
                 <li>
                     <iframe class="video" width="960" height="472" src="https://www.youtube.com/embed/0NxRoB6_TiM?si=LeF03xf90mHCSmhR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </li>
             </ul>
-            <a class="more" href="p_sounddesign.html">Explore more >></a>
+            <a class="more" href="p_sounddesign.html" 
+                data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                Explore more >>
+            </a>
 
         </div>
 
@@ -109,6 +121,8 @@
     </div>
     <!---------- footer ---------->
     <footer>© 2025 Copyright Ivy Raine Music</footer>
-    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>   
 </body>
 </html>

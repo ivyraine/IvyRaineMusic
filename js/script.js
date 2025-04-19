@@ -71,13 +71,23 @@ $(document).ready(function() {
         visibleItems = Math.floor(playerWidth / itemWidth);
         if (visibleItems === 0) visibleItems = 1;
         
-        // 計算最大位移（負值）
+        // 計算總寬度
         const totalWidth = itemWidth * itemCount;
-        maxPosition = -(totalWidth - (visibleItems * itemWidth));
+        
+        // 計算最大位移：負的總寬度減去容器寬度
+        maxPosition = -(totalWidth - playerWidth);
+        
+        // 確保 maxPosition 不為正值
+        if (maxPosition > 0) {
+            maxPosition = 0;
+        }
         
         // 確保當前位置在有效範圍內
         if (currentPosition < maxPosition) {
             currentPosition = maxPosition;
+            carousel.css("transform", `translateX(${currentPosition}px)`);
+        } else if (currentPosition > 0) {
+            currentPosition = 0;
             carousel.css("transform", `translateX(${currentPosition}px)`);
         }
         
@@ -130,111 +140,111 @@ $(document).ready(function() {
         }
     }
     
-    // 初始化按鈕狀態
-    updateButtonsState();
+    // // 初始化按鈕狀態
+    // updateButtonsState();
     
-    // 觸摸事件處理（適用於移動設備）
-    carousel.on("touchstart", function(e) {
-        startX = e.originalEvent.touches[0].clientX;
-        initialPosition = currentPosition;
-        carousel.css("transition", "none");
-    });
+    // // 觸摸事件處理（適用於移動設備）
+    // carousel.on("touchstart", function(e) {
+    //     startX = e.originalEvent.touches[0].clientX;
+    //     initialPosition = currentPosition;
+    //     carousel.css("transition", "none");
+    // });
     
-    carousel.on("touchmove", function(e) {
-        moveX = e.originalEvent.touches[0].clientX;
-        const diff = moveX - startX;
+    // carousel.on("touchmove", function(e) {
+    //     moveX = e.originalEvent.touches[0].clientX;
+    //     const diff = moveX - startX;
         
-        // 增加阻力，防止過度滑動
-        let newPosition = initialPosition + diff;
-        if (newPosition > 0) {
-            newPosition = initialPosition + diff * 0.3;
-        } else if (newPosition < maxPosition) {
-            newPosition = initialPosition + diff * 0.3;
-        }
+    //     // 增加阻力，防止過度滑動
+    //     let newPosition = initialPosition + diff;
+    //     if (newPosition > 0) {
+    //         newPosition = initialPosition + diff * 0.3;
+    //     } else if (newPosition < maxPosition) {
+    //         newPosition = initialPosition + diff * 0.3;
+    //     }
         
-        carousel.css("transform", `translateX(${newPosition}px)`);
-    });
+    //     carousel.css("transform", `translateX(${newPosition}px)`);
+    // });
     
-    carousel.on("touchend", function(e) {
-        carousel.css("transition", "transform 0.3s ease");
-        const endX = e.originalEvent.changedTouches[0].clientX;
-        const diff = endX - startX;
+    // carousel.on("touchend", function(e) {
+    //     carousel.css("transition", "transform 0.3s ease");
+    //     const endX = e.originalEvent.changedTouches[0].clientX;
+    //     const diff = endX - startX;
         
-        // 判断滑动方向和距离来确定是否切换
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                // 向右滑，向前移动
-                currentPosition = Math.min(currentPosition + itemWidth, 0);
-            } else {
-                // 向左滑，向后移动
-                currentPosition = Math.max(currentPosition - itemWidth, maxPosition);
-            }
-        } else {
-            // 如果滑动距离小，恢复到原位置
-            currentPosition = initialPosition;
-        }
+    //     // 判断滑动方向和距离来确定是否切换
+    //     if (Math.abs(diff) > 50) {
+    //         if (diff > 0) {
+    //             // 向右滑，向前移动
+    //             currentPosition = Math.min(currentPosition + itemWidth, 0);
+    //         } else {
+    //             // 向左滑，向后移动
+    //             currentPosition = Math.max(currentPosition - itemWidth, maxPosition);
+    //         }
+    //     } else {
+    //         // 如果滑动距离小，恢复到原位置
+    //         currentPosition = initialPosition;
+    //     }
         
-        carousel.css("transform", `translateX(${currentPosition}px)`);
-        updateButtonsState();
-    });
+    //     carousel.css("transform", `translateX(${currentPosition}px)`);
+    //     updateButtonsState();
+    // });
     
-    // 鼠標拖拽事件（適用於桌面設備）
-    carousel.on("mousedown", function(e) {
-        e.preventDefault();
-        startX = e.pageX;
-        initialPosition = currentPosition;
-        carousel.css("transition", "none");
+    // // 鼠標拖拽事件（適用於桌面設備）
+    // carousel.on("mousedown", function(e) {
+    //     e.preventDefault();
+    //     startX = e.pageX;
+    //     initialPosition = currentPosition;
+    //     carousel.css("transition", "none");
         
-        $(document).on("mousemove", dragHandler);
-        $(document).on("mouseup", releaseHandler);
-    });
+    //     $(document).on("mousemove", dragHandler);
+    //     $(document).on("mouseup", releaseHandler);
+    // });
     
-    function dragHandler(e) {
-        moveX = e.pageX;
-        const diff = moveX - startX;
+    // function dragHandler(e) {
+    //     moveX = e.pageX;
+    //     const diff = moveX - startX;
         
-        // 增加阻力，防止過度滑動
-        let newPosition = initialPosition + diff;
-        if (newPosition > 0) {
-            newPosition = initialPosition + diff * 0.3;
-        } else if (newPosition < maxPosition) {
-            newPosition = initialPosition + diff * 0.3;
-        }
+    //     // 增加阻力，防止過度滑動
+    //     let newPosition = initialPosition + diff;
+    //     if (newPosition > 0) {
+    //         newPosition = initialPosition + diff * 0.3;
+    //     } else if (newPosition < maxPosition) {
+    //         newPosition = initialPosition + diff * 0.3;
+    //     }
         
-        carousel.css("transform", `translateX(${newPosition}px)`);
-    }
+    //     carousel.css("transform", `translateX(${newPosition}px)`);
+    // }
     
-    function releaseHandler(e) {
-        $(document).off("mousemove", dragHandler);
-        $(document).off("mouseup", releaseHandler);
+    // function releaseHandler(e) {
+    //     $(document).off("mousemove", dragHandler);
+    //     $(document).off("mouseup", releaseHandler);
         
-        carousel.css("transition", "transform 0.3s ease");
-        const endX = e.pageX;
-        const diff = endX - startX;
+    //     carousel.css("transition", "transform 0.3s ease");
+    //     const endX = e.pageX;
+    //     const diff = endX - startX;
         
-        // 判断滑动方向和距离来确定是否切换
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                // 向右拖，向前移动
-                currentPosition = Math.min(currentPosition + itemWidth, 0);
-            } else {
-                // 向左拖，向后移动
-                currentPosition = Math.max(currentPosition - itemWidth, maxPosition);
-            }
-        } else {
-            // 如果拖动距离小，恢复到原位置
-            currentPosition = initialPosition;
-        }
+    //     // 判断滑动方向和距离来确定是否切换
+    //     if (Math.abs(diff) > 50) {
+    //         if (diff > 0) {
+    //             // 向右拖，向前移动
+    //             currentPosition = Math.min(currentPosition + itemWidth, 0);
+    //         } else {
+    //             // 向左拖，向后移动
+    //             currentPosition = Math.max(currentPosition - itemWidth, maxPosition);
+    //         }
+    //     } else {
+    //         // 如果拖动距离小，恢复到原位置
+    //         currentPosition = initialPosition;
+    //     }
         
-        carousel.css("transform", `translateX(${currentPosition}px)`);
-        updateButtonsState();
-    }
+    //     carousel.css("transform", `translateX(${currentPosition}px)`);
+    //     updateButtonsState();
+    // }
     
-    // 防止拖拽過程中選擇文字
-    carousel.on("selectstart", function(e) {
-        e.preventDefault();
-        return false;
-    });
+    // // 防止拖拽過程中選擇文字
+    // carousel.on("selectstart", function(e) {
+    //     e.preventDefault();
+    //     return false;
+    // });
 });
 
 /* ---------- 照片跑馬燈 ----------*/
@@ -372,3 +382,44 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+/* ---------- 倒數計時器 ----------*/
+window.addEventListener('load', () => {
+    // 設定目標日期的倒數計時器
+    countdownTo('2025-06-30 23:59:59');
+});
+
+// 設定某個指定日期的倒數計時器
+function countdownTo(targetDate) {
+    let countDownDate = new Date(targetDate);
+    let countdownDisplay = document.querySelector('.clock');
+    
+    // 立即更新一次顯示，避免等待第一次間隔
+    updateCountdown();
+    
+    let timer = setInterval(updateCountdown, 1000);
+    
+    function updateCountdown() {
+        let now = new Date();
+        let distance = countDownDate - now;
+        
+        if(distance < 0) {
+            clearInterval(timer);
+            countdownDisplay.innerText = `倒數時間到!`;
+            return;
+        }
+        
+        let days = Math.floor(distance / (24 * 60 * 60 * 1000));
+        let hours = Math.floor((distance % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+        let minutes = Math.floor((distance % (60 * 60 * 1000)) / (60 * 1000));
+        let seconds = Math.floor((distance % (60 * 1000)) / 1000);
+        
+        // 確保顯示格式一致，保持個位數的前導零
+        hours = (hours < 10) ? '0' + hours : hours;
+        minutes = (minutes < 10) ? '0' + minutes : minutes;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+        
+        countdownDisplay.innerText = `${days}天${hours}時${minutes}分${seconds}秒`;
+    }
+}

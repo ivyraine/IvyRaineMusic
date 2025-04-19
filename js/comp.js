@@ -175,8 +175,14 @@ $(document).ready(function () {
 
     // 搜尋按鈕點擊事件
     $('#searchButton').click(function () {
+        // if (selectedTags.length === 0) {
+        //     alert('請至少選擇一個標籤');
+        //     return;
+        // }
+
+        // 如果沒有選擇標籤，顯示全部歌曲
         if (selectedTags.length === 0) {
-            alert('請至少選擇一個標籤');
+            displayResults(musicData);
             return;
         }
 
@@ -199,8 +205,9 @@ $(document).ready(function () {
     function getSoundCloudEmbedUrl(url) {
         // 從 URL 獲取 track ID，這是一個示例方法，您可能需要根據實際 SoundCloud URL 格式調整
         const cleanUrl = url.split('?')[0];
-        return `https://w.soundcloud.com/player/?url=${encodeURIComponent(cleanUrl)}&color=%23000000&theme=dark&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
+        return `https://w.soundcloud.com/player/?url=${encodeURIComponent(cleanUrl)}&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true`;
     }
+
 
     // 顯示搜尋結果
     function displayResults(results) {

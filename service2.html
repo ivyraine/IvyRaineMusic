@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="css/rwd.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Service</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src = "js/script.js"></script>
 </head>
 
@@ -52,7 +55,7 @@
             <div class = "theme">服務項目</div>
             <!---------- service ---------->
 
-            <div class="content">
+            <div class="content" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
                 <div class = "title">優惠方案</div>
             
                 <div class = "item">
@@ -60,12 +63,12 @@
                     
                     <div class ="countdown">
                         <p class = 'time-remain'>活動剩餘時間</p>
-                        <p class = 'clock'>90天08時27分43秒</p>
+                        <p class = 'clock'></p>
                     </div>
                 </div>
             </div>   
 
-            <div class="content2">
+            <div class="content2" data-aos = "fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out">
                 <div class = "title">服務項目</div>
 
                 <div class = "item2">
@@ -110,6 +113,8 @@
 
     <!---------- footer ---------->
     <footer>© 2025 Copyright Ivy Raine Music</footer>
-    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
