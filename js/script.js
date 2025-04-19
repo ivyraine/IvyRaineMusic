@@ -344,7 +344,6 @@ $(function(){
     });
 });
 
-
 /* ---------- 活動照片切換tab ----------*/
 
 document.addEventListener('DOMContentLoaded', function() {
