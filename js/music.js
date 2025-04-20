@@ -347,7 +347,7 @@ $(document).ready(function () {
             id: 50,
             title: "Tropical Vibe",
             artist: "Ivy Raine",
-            tags: ["synth", "beats", "EDM", "happy", "hopeful", "sad", "India"],
+            tags: ["synth", "beats", "EDM", "happy", "hopeful", "chill"],
             soundcloudUrl: "https://soundcloud.com/ivy_raine/tropical-vibe?in=ivy_raine/sets/edm-score-collection-2024&si=3cdbd32d4c604b049a8635b1089ba1cf&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         },
 
