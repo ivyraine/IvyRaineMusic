@@ -474,7 +474,7 @@ $(document).ready(function () {
             //         </div>
             //     `);
 
-            results.slice(0, 16).forEach(song => {
+            results.slice(0, 20).forEach(song => {
                 const embedUrl = getSoundCloudEmbedUrl(song.soundcloudUrl);
                 const $songItem = $(`
                     <div class="result-item">
