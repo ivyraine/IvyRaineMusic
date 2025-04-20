@@ -46,7 +46,7 @@ $(document).ready(function () {
             id: 7,
             title: "Coinpage",
             artist: "Ivy Raine",
-            tags: ["synth", "beats", "edm", "uplifting", "exciting"],
+            tags: ["synth", "beats", "EDM", "uplifting", "exciting"],
             soundcloudUrl: "https://soundcloud.com/ivy_raine/coinpage?in=ivy_raine/sets/hyper-cross&si=6e805378739642989debbd68caa9e04b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         },
         {
