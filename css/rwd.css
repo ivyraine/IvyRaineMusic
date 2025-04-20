@@ -194,7 +194,7 @@
     .bar ul li ol {
         display: none;
         position: relative;
-        width: 120%;
+        width: 100%;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 0;
         
@@ -461,7 +461,22 @@
         margin: 20px auto 60px;
     }
 }
-/*      music search     */
+/* ---------- comp and arr music search ----------*/
+@media screen and (max-width: 1000px) {
+    .search-tags {
+        gap: 4px;
+        min-height: 34px;
+    }
+
+    .category-tabs {
+        gap:0px
+    }
+
+    .result-item {
+      width: calc(33.33% - 14px);
+    }
+  }
+  
 @media screen and (max-width:820px) {
     .title2{
         margin: 100px auto 0px;
@@ -469,11 +484,25 @@
         font-size: 58px;
         height: 70px;
     }
+    .search-tags {
+        gap: 4px;
+        min-height: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .result-item {
+        width: calc(50% - 10px);
+    }
+    
+    #resultsList {
+        gap: 15px;
+    }
 }
 
 @media screen and (max-width:576px) {
     .search-area {
-        margin: 60px auto 5px;
+        margin: 50px auto 5px;
         gap: 0;  
         width: 85%;
     }
@@ -524,18 +553,23 @@
     .results-section {
         padding: 0px 20px;
     }
+    
+    .result-item {
+        width: calc(100% - 10px);
+        aspect-ratio: 5/2;
+    }
 }
 
 @media screen and (max-width:440px) {
     .title2{
         margin: 100px auto 0px;
         width: 240px;
-        font-size: 52px;
-        height: 65px;
+        font-size: 42px;
+        height: 56px;
     }
 
     .search-area {
-        margin: 60px auto 5px;
+        margin: 50px auto 5px;
         width: 90%;
     }
 
@@ -544,8 +578,7 @@
     }
 
     .category-tabs {
-        width: 95%;
-        gap: 5px;
+        width: 90%;
     }
 
     .category-tabs span, .category-tabs i{
@@ -558,31 +591,7 @@
     }
 }
 
-/*      comp and arr page      */
-@media screen and (max-width: 1000px) {
-    .result-item {
-      width: calc(33.33% - 14px);
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .result-item {
-      width: calc(50% - 10px);
-    }
-    
-    #resultsList {
-      gap: 15px;
-    }
-  }
-  
-  @media screen and (max-width: 576px) {
-    .result-item {
-        width: calc(100% - 10px);
-        aspect-ratio: 5/2;
-      }
-  }
-
-/*      film score / sound page      */
+/*      game music / sound page      */
 @media screen and (max-width:1000px) {
     #mainVideo, #mainImage {
         width: 80%;
@@ -596,6 +605,10 @@
         height: 62px;
         margin: 100px auto 0;
         border-bottom: 6px solid #77FFF3;
+    }
+
+    .video-player, .image-player{
+        padding-top:10px
     }
 }
 
@@ -652,20 +665,20 @@
 
 @media screen and (max-width:665px) {
     .act-kc .theme {
-        font-size: 60px;
-        max-width: 500px;
-        height: 74px;
-        position: absolute;
-        top: 12vh;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
+        font-size: 52px;
+        width: 240px;
+        height: 62px;
+        position: initial;
+        margin: -80px auto 0; 
     }
 
     .act-kc {
         margin: 25vh auto 0;
     }
+
+    .album-container {
+        margin: 60px auto 40px;
+      }
 
     .album-tabs {
         font-size: 18px;
@@ -680,11 +693,6 @@
 }
 
 @media screen and (max-width:576px) {
-    .act-kc .theme {
-        font-size: 52px;
-        height: 64px;
-    }
-
     .album-tabs {
         font-size: 16px;
         height: 20px;
@@ -698,11 +706,6 @@
 }
 
 @media screen and (max-width:440px) {
-    .act-kc .theme {
-        font-size: 42px;
-        height: 54px;
-    }
-
     .album-grid {
         gap: 10px;
         padding: 10px;
@@ -713,6 +716,10 @@
 /* ---------- service page ----------*/
 
 @media screen and (max-width:1000px) {
+    .ser-kc .theme {
+        width: 400px;
+    }
+
     .countdown {
         width: 200px;
     }
@@ -725,13 +732,14 @@
 }
 
 @media screen and (max-width:820px) {
-    .item, .item2{
-        outline: 20px solid rgba(255, 255, 255, 0.3);
+    .ser-kc .theme {
+        font-size: 82px;
+        height: 96px;
+        width: 360px;
     }
 
-    .ser-kc .theme {
-        font-size: 84px;
-        height: 100px;
+    .item, .item2{
+        outline: 20px solid rgba(255, 255, 255, 0.3);
     }
 
     .countdown {
@@ -769,18 +777,14 @@
 
     .ser-kc .theme {
         font-size: 60px;
-        height: 74px;
+        height: 70px;
+        width: 240px;
     }
 }
 
 @media screen and (max-width:576px) {
     .item, .item2{
         outline: 16px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .ser-kc .theme {
-        font-size: 52px;
-        height: auto;
     }
 
     .item-container {
@@ -805,10 +809,6 @@
         outline: 12px solid rgba(255, 255, 255, 0.3);
     }
 
-    .ser-kc .theme {
-        font-size: 42px;
-        height: 50px;
-    }
 }
 
 /*      contact page      */
@@ -891,6 +891,10 @@
 }
 
 @media screen and (max-width:440px) {
+    .contact-kc ul {
+        margin: 2vh auto;
+      }
+    
     .contact-kc .theme {
         width: 160px;
         font-size: 48px;
@@ -917,3 +921,8 @@
         padding-bottom: 0px;
       }
 }
+
+/*      footer     */
+footer {
+    font-size: 12px;
+  }

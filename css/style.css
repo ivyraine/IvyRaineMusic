@@ -1021,7 +1021,7 @@ section {
   border: 18px solid rgba(255, 255, 255, 0.4);
 }
 
-/* ---------- comp and arr ----------*/
+/* ---------- comp and arr music search ----------*/
 .search-area {
   margin: 60px auto 20px;
   width: 80%;
@@ -1083,6 +1083,7 @@ section {
 
 .category-tabs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0px auto;
   width: 82%;
   gap: 15px;
@@ -1219,7 +1220,7 @@ section {
   z-index: 10;
 }
 
-/* ---------- film Score ----------*/
+/* ---------- game music----------*/
 #mainVideo {
   display: block;
   width: 100%;
@@ -1235,7 +1236,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px 0 40px;
 }
 
 .arrow {
@@ -1284,7 +1285,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px 0 40px;
 }
 
 .arrow2 {
@@ -1413,21 +1414,13 @@ section {
 
 /* ---------- service page ----------*/
 .ser-kc {
-  position: static;
-  max-width: 90%;
-  right: auto;
-  top: auto;
-  margin: 88vh auto 0;
-  padding-bottom: 0;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .ser-kc .theme {
   max-width: 500px;
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  margin: 45vh auto;
 }
 
 .ser-kc .title {
@@ -1458,7 +1451,6 @@ section {
   position: relative;
 }
 
-
 .item-container {
   display: block;
   height: auto;
@@ -1472,7 +1464,6 @@ section {
 
 .item-container h3 {
   padding: 40px;
-
 }
 
 .countdown {

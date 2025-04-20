@@ -12,13 +12,13 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Composition and Arrangement</title>
+    <title>Music</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://w.soundcloud.com/player/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src = "js/script.js"></script>
-    <script src="./js/comp.js"></script>
+    <script src="./js/music.js"></script>
 </head>
 
 <body class = "comp_page">
@@ -38,7 +38,7 @@
                     <a href="portfolio2.html">Portfolio</a>
                     <ol>
                         <li><a href="p_comp_arr.html">Music</a></li>
-                        <li><a href="p_filmscore.html">Film Score</a></li>
+                        <li><a href="p_filmscore.html">Game Music</a></li>
                         <li><a href="p_sounddesign.html">Sound Design</a></li>
                     </ol>
                 </li>
@@ -65,7 +65,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
-        <p class="tutorial">點選您想要的樂器、曲風、心情標籤，快速搜尋並試聽符合您需求的歌曲</p>
+        <p class="tutorial">點選您想要的樂器、曲風、心情等標籤，快速搜尋並試聽符合您需求的歌曲</p>
 
         <!---------- list ---------->
 
@@ -79,9 +79,12 @@
                 <span>Genre</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-
             <div class="category-tab" data-category="mood">
                 <span>Mood</span>
+                <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="category-tab" data-category="country">
+                <span>Country</span>
                 <i class="fa-solid fa-chevron-up"></i>
             </div>
         </div>
@@ -89,50 +92,94 @@
         <!-- Instrument 標籤組 -->
         <div class="tabs-group" id="inst-tabs-group">
             <div class="content-tabs">
-                <div class="content-tab" data-category="inst" data-value="guitar">Guitar</div>
-                <div class="content-tab" data-category="inst" data-value="strings">Strings</div>
-                <div class="content-tab" data-category="inst" data-value="brass">Brass</div>
-                <div class="content-tab" data-category="inst" data-value="bass">Bass</div>
-                <div class="content-tab" data-category="inst" data-value="ethnic">Ethnic</div>
-                <div class="content-tab" data-category="inst" data-value="keys">Keys</div>
-                <div class="content-tab" data-category="inst" data-value="synth">Synth</div>
-                <div class="content-tab" data-category="inst" data-value="woodwinds">Woodwinds</div>
-                <div class="content-tab" data-category="inst" data-value="percussion">Percussion</div>
-                <div class="content-tab" data-category="inst" data-value="piano">Piano</div>
-                <div class="content-tab" data-category="inst" data-value="vocal">Vocal</div>
-                <div class="content-tab" data-category="inst" data-value="drums">Drums</div>
+                <div class="content-tab" data-category="inst" data-value="guitar">guitar</div>
+                <div class="content-tab" data-category="inst" data-value="orchestra">orchestra</div>
+                <div class="content-tab" data-category="inst" data-value="strings">strings</div>
+                <div class="content-tab" data-category="inst" data-value="brass">brass</div>
+                <div class="content-tab" data-category="inst" data-value="bass">bass</div>
+                <div class="content-tab" data-category="inst" data-value="keys">keys</div>
+                <div class="content-tab" data-category="inst" data-value="synth">synth</div>
+                <div class="content-tab" data-category="inst" data-value="woodwind">woodwind</div>
+                <div class="content-tab" data-category="inst" data-value="flute">flute</div>
+                <div class="content-tab" data-category="inst" data-value="percussion">percussion</div>
+                <div class="content-tab" data-category="inst" data-value="piano">piano</div>
+                <div class="content-tab" data-category="inst" data-value="vocal">vocal</div>
+                <div class="content-tab" data-category="inst" data-value="drums">drums</div>
+                <div class="content-tab" data-category="inst" data-value="beats">beats</div>
+                <div class="content-tab" data-category="inst" data-value="udu">udu</div>
+                <div class="content-tab" data-category="inst" data-value="tabla">tabla</div>
+                <div class="content-tab" data-category="inst" data-value="marimba">marimba</div>                
+                <div class="content-tab" data-category="inst" data-value="Vibraphone">Vibraphone</div>
+                <div class="content-tab" data-category="inst" data-value="accordion">accordion</div>
+                <div class="content-tab" data-category="inst" data-value="xylophone">xylophone</div>
+                <div class="content-tab" data-category="inst" data-value="sitar">sitar</div>
+                <div class="content-tab" data-category="inst" data-value="erhu">erhu</div>
+                <div class="content-tab" data-category="inst" data-value="guzheng">guzheng</div>
+                <div class="content-tab" data-category="inst" data-value="harmonica">harmonica</div>
+
+
+
+
             </div>
         </div>
 
         <!-- Genre 標籤組 -->
         <div class="tabs-group active" id="genre-tabs-group">
             <div class="content-tabs">
-                <div class="content-tab" data-category="genre" data-value="Orchestral">Orchestral</div>
-                <div class="content-tab" data-category="genre" data-value="Cinematic">Cinematic</div>
-                <div class="content-tab" data-category="genre" data-value="Hiphop">Hiphop</div>
-                <div class="content-tab" data-category="genre" data-value="Electronic">Electronic</div>
+                <div class="content-tab" data-category="genre" data-value="epic">epic</div>
+                <div class="content-tab" data-category="genre" data-value="cinematic">cinematic</div>
+                <div class="content-tab" data-category="genre" data-value="hiphop">hiphop</div>
+                <div class="content-tab" data-category="genre" data-value="electronic">electronic</div>
                 <div class="content-tab" data-category="genre" data-value="EDM">EDM</div>
-                <div class="content-tab" data-category="genre" data-value="World">World</div>
-                <div class="content-tab" data-category="genre" data-value="Latin">Latin</div>
-                <div class="content-tab" data-category="genre" data-value="Rock">Rock</div>
-                <div class="content-tab" data-category="genre" data-value="Funk">Funk</div>
-                <div class="content-tab" data-category="genre" data-value="Blues">Blues</div>
-                <div class="content-tab" data-category="genre" data-value="Country">Country</div>
-                <div class="content-tab" data-category="genre" data-value="Jazz">Jazz</div>
-                <div class="content-tab" data-category="genre" data-value="Exotic">Exotic</div>
+                <div class="content-tab" data-category="genre" data-value="world">world</div>
+                <div class="content-tab" data-category="genre" data-value="latin">latin</div>
+                <div class="content-tab" data-category="genre" data-value="Funk">funk</div>
+                <div class="content-tab" data-category="genre" data-value="country">country</div>
+                <div class="content-tab" data-category="genre" data-value="folk">folk</div>
+                <div class="content-tab" data-category="genre" data-value="jazz">jazz</div>
+                <div class="content-tab" data-category="genre" data-value="exotic">exotic</div>
+                <div class="content-tab" data-category="genre" data-value="poprock">poprock</div>
+
             </div>
         </div>
 
         <!-- Mood 標籤組 -->
         <div class="tabs-group" id="mood-tabs-group">
             <div class="content-tabs">
-                <div class="content-tab" data-category="mood" data-value="happy">Happy</div>
-                <div class="content-tab" data-category="mood" data-value="nervous">Nervous</div>
-                <div class="content-tab" data-category="mood" data-value="sad">Sad</div>
-                <div class="content-tab" data-category="mood" data-value="energetic">Energetic</div>
-                <div class="content-tab" data-category="mood" data-value="relaxed">Relaxed</div>
-                <div class="content-tab" data-category="mood" data-value="romantic">Romantic</div>
-                <div class="content-tab" data-category="mood" data-value="horror">Horror</div>
+                <div class="content-tab" data-category="mood" data-value="happy">happy</div>
+                <div class="content-tab" data-category="mood" data-value="mysterious">mysterious</div>
+                <div class="content-tab" data-category="mood" data-value="dramatic">dramatic</div>
+                <div class="content-tab" data-category="mood" data-value="adventure">adventure</div>
+                <div class="content-tab" data-category="mood" data-value="nervous">nervous</div>
+                <div class="content-tab" data-category="mood" data-value="tense">tense</div>
+                <div class="content-tab" data-category="mood" data-value="horror">horror</div>
+                <div class="content-tab" data-category="mood" data-value="sad">sad</div>
+                <div class="content-tab" data-category="mood" data-value="energetic">energetic</div>
+                <div class="content-tab" data-category="mood" data-value="uplifting">uplifting</div>
+                <div class="content-tab" data-category="mood" data-value="chill">chill</div>
+                <div class="content-tab" data-category="mood" data-value="hopeful">hopeful</div>
+                <div class="content-tab" data-category="mood" data-value="fantasy">fantasy</div>
+                <div class="content-tab" data-category="mood" data-value="peaceful">peaceful</div>
+                <div class="content-tab" data-category="mood" data-value="romantic">romantic</div>
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Country 標籤組 -->
+        <div class="tabs-group" id="country-tabs-group">
+            <div class="content-tabs">
+                <div class="content-tab" data-category="country" data-value="China">China</div>
+                <div class="content-tab" data-category="country" data-value="Portugal">Portugal</div>
+                <div class="content-tab" data-category="country" data-value="India">India</div>
+                <div class="content-tab" data-category="country" data-value="France">France</div>
+                <div class="content-tab" data-category="country" data-value="Brazil">Brazil</div>
+                <div class="content-tab" data-category="country" data-value="USA">USA</div>
+                <div class="content-tab" data-category="country" data-value="Japan">Japan</div>
+
+
             </div>
         </div>
 
