@@ -1,22 +1,30 @@
 
 /* ---------- 漢堡選單 ----------*/
 document.addEventListener('DOMContentLoaded', () => {
-    const barIcon = document.querySelector('.bar i');
+    const barIcon = document.querySelector('.fa-bars');
+    const closeIcon = document.querySelector('.fa-times');
     const nav = document.querySelector('.bar');
     const overlay = document.querySelector('.overlay');
     const hasSubmenuItems = document.querySelectorAll('.bar > ul > li.has-submenu > a');
 
     // 漢堡選單開關
-    barIcon.addEventListener('click', () => {
+    const toggleMenu = () => {
         nav.classList.toggle('active');
-        overlay.style.display = nav.classList.contains('active') ? 'block' : 'none';
-    });
+        const isActive = nav.classList.contains('active');
+        overlay.style.display = isActive ? 'block' : 'none';
+        barIcon.style.display = isActive ? 'none' : 'block';
+        closeIcon.style.display = isActive ? 'block' : 'none';
+    };
+
+    barIcon.addEventListener('click', toggleMenu);
+    closeIcon.addEventListener('click', toggleMenu);
 
     // 點擊遮罩關閉選單
     overlay.addEventListener('click', () => {
         nav.classList.remove('active');
         overlay.style.display = 'none';
-        // 關閉所有子選單
+        barIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
         document.querySelectorAll('.bar > ul > li.active').forEach(item => {
             item.classList.remove('active');
         });
