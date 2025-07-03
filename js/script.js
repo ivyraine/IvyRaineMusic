@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ---------- 倒數計時器 ----------*/
 window.addEventListener('load', () => {
     // 設定目標日期的倒數計時器
-    countdownTo('2025-06-30 23:59:59');
+    countdownTo('2025-07-31 23:59:59');
 });
 
 // 設定某個指定日期的倒數計時器
